@@ -1,0 +1,253 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local RedWoodFucker = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local ExitButton = Instance.new("TextLabel")
+local MainTab = Instance.new("Frame")
+local TazeAll = Instance.new("TextButton")
+local KillAll = Instance.new("TextButton")
+local ArrestAll = Instance.new("TextButton")
+local Warning = Instance.new("TextLabel")
+local Weapons = Instance.new("TextButton")
+local RemoveAllDoors = Instance.new("TextButton")
+local Btools = Instance.new("TextButton")
+local TeamText = Instance.new("TextBox")
+local Team = Instance.new("TextButton")
+local WalkSpeed = Instance.new("TextButton")
+local WalkSpeedText = Instance.new("TextBox")
+--Properties:
+RedWoodFucker.Name = "RedWoodFucker"
+RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = RedWoodFucker
+MainFrame.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
+MainFrame.BorderSizePixel = 3
+MainFrame.Position = UDim2.new(0.0137980469, 0, 0.42151165, 0)
+MainFrame.Size = UDim2.new(0, 328, 0, 240)
+
+Bar.Name = "Bar"
+Bar.Parent = MainFrame
+Bar.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Bar.BorderSizePixel = 3
+Bar.Size = UDim2.new(0, 328, 0, 23)
+
+Title.Name = "Title"
+Title.Parent = Bar
+Title.BackgroundColor3 = Color3.new(1, 1, 1)
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0.246951193, 0, -0.782608628, 0)
+Title.Size = UDim2.new(0, 166, 0, 59)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Red Wood Fucker"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 24
+
+ExitButton.Name = "ExitButton"
+ExitButton.Parent = Bar
+ExitButton.BackgroundColor3 = Color3.new(1, 1, 1)
+ExitButton.BackgroundTransparency = 1
+ExitButton.Position = UDim2.new(0.710365891, 0, -0.782608628, 0)
+ExitButton.Size = UDim2.new(0, 166, 0, 59)
+ExitButton.Font = Enum.Font.SourceSansBold
+ExitButton.Text = "X"
+ExitButton.TextColor3 = Color3.new(1, 1, 1)
+ExitButton.TextSize = 24
+
+MainTab.Name = "MainTab"
+MainTab.Parent = MainFrame
+MainTab.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+MainTab.BorderColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+MainTab.LayoutOrder = -5
+MainTab.Position = UDim2.new(0.021341417, 0, 0.138592407, 0)
+MainTab.Size = UDim2.new(0, 314, 0, 199)
+
+TazeAll.Name = "TazeAll"
+TazeAll.Parent = MainTab
+TazeAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+TazeAll.BorderSizePixel = 2
+TazeAll.Position = UDim2.new(0.0477707013, 0, 0.0804020017, 0)
+TazeAll.Size = UDim2.new(0, 74, 0, 24)
+TazeAll.Font = Enum.Font.SourceSans
+TazeAll.Text = "Taze All"
+TazeAll.TextColor3 = Color3.new(1, 1, 1)
+TazeAll.TextSize = 14
+
+KillAll.Name = "KillAll"
+KillAll.Parent = MainTab
+KillAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+KillAll.BorderSizePixel = 2
+KillAll.Position = UDim2.new(0.0477707013, 0, 0.271356761, 0)
+KillAll.Size = UDim2.new(0, 74, 0, 24)
+KillAll.Font = Enum.Font.SourceSans
+KillAll.Text = "Kill All"
+KillAll.TextColor3 = Color3.new(1, 1, 1)
+KillAll.TextSize = 14
+
+ArrestAll.Name = "ArrestAll"
+ArrestAll.Parent = MainTab
+ArrestAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+ArrestAll.BorderSizePixel = 2
+ArrestAll.Position = UDim2.new(0.0477707013, 0, 0.472361773, 0)
+ArrestAll.Size = UDim2.new(0, 74, 0, 24)
+ArrestAll.Font = Enum.Font.SourceSans
+ArrestAll.Text = "Arrest All"
+ArrestAll.TextColor3 = Color3.new(1, 1, 1)
+ArrestAll.TextSize = 14
+
+Warning.Name = "Warning"
+Warning.Parent = MainTab
+Warning.BackgroundColor3 = Color3.new(1, 1, 1)
+Warning.BackgroundTransparency = 1
+Warning.Position = UDim2.new(0.0191082805, 0, 0.633165836, 0)
+Warning.Size = UDim2.new(0, 118, 0, 50)
+Warning.Font = Enum.Font.SourceSans
+Warning.Text = "Warning! It shows your name when you arrest someone"
+Warning.TextColor3 = Color3.new(1, 0, 0.0156863)
+Warning.TextScaled = true
+Warning.TextSize = 14
+Warning.TextWrapped = true
+
+Weapons.Name = "Weapons"
+Weapons.Parent = MainTab
+Weapons.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Weapons.BorderSizePixel = 2
+Weapons.Position = UDim2.new(0.382165611, 0, 0.0804019868, 0)
+Weapons.Size = UDim2.new(0, 74, 0, 24)
+Weapons.Font = Enum.Font.SourceSans
+Weapons.Text = "Starter Pack"
+Weapons.TextColor3 = Color3.new(1, 1, 1)
+Weapons.TextSize = 14
+
+RemoveAllDoors.Name = "RemoveAllDoors"
+RemoveAllDoors.Parent = MainTab
+RemoveAllDoors.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+RemoveAllDoors.BorderSizePixel = 2
+RemoveAllDoors.Position = UDim2.new(0.382165611, 0, 0.271356761, 0)
+RemoveAllDoors.Size = UDim2.new(0, 74, 0, 24)
+RemoveAllDoors.Font = Enum.Font.SourceSans
+RemoveAllDoors.Text = "Remove All Doors"
+RemoveAllDoors.TextColor3 = Color3.new(1, 1, 1)
+RemoveAllDoors.TextScaled = true
+RemoveAllDoors.TextSize = 14
+RemoveAllDoors.TextWrapped = true
+
+Btools.Name = "Btools"
+Btools.Parent = MainTab
+Btools.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Btools.BorderSizePixel = 2
+Btools.Position = UDim2.new(0.382165611, 0, 0.472361803, 0)
+Btools.Size = UDim2.new(0, 74, 0, 24)
+Btools.Font = Enum.Font.SourceSans
+Btools.Text = "Btools"
+Btools.TextColor3 = Color3.new(1, 1, 1)
+Btools.TextSize = 14
+Btools.TextWrapped = true
+
+TeamText.Name = "TeamText"
+TeamText.Parent = MainTab
+TeamText.BackgroundColor3 = Color3.new(1, 1, 1)
+TeamText.BorderSizePixel = 2
+TeamText.Position = UDim2.new(0.694267511, 0, 0.271356761, 0)
+TeamText.Size = UDim2.new(0, 72, 0, 18)
+TeamText.Font = Enum.Font.SourceSans
+TeamText.Text = "Police"
+TeamText.TextColor3 = Color3.new(0, 0, 0)
+TeamText.TextSize = 14
+
+Team.Name = "Team"
+Team.Parent = MainTab
+Team.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Team.BorderSizePixel = 2
+Team.Position = UDim2.new(0.687898099, 0, 0.0804019868, 0)
+Team.Size = UDim2.new(0, 74, 0, 24)
+Team.Font = Enum.Font.SourceSans
+Team.Text = "Team ↓"
+Team.TextColor3 = Color3.new(1, 1, 1)
+Team.TextSize = 14
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = MainTab
+WalkSpeed.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+WalkSpeed.BorderSizePixel = 2
+WalkSpeed.Position = UDim2.new(0.684849322, 0, 0.471084565, 0)
+WalkSpeed.Size = UDim2.new(0, 74, 0, 24)
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "WalkSpeed ↓"
+WalkSpeed.TextColor3 = Color3.new(1, 1, 1)
+WalkSpeed.TextSize = 14
+
+WalkSpeedText.Name = "WalkSpeedText"
+WalkSpeedText.Parent = MainTab
+WalkSpeedText.BackgroundColor3 = Color3.new(1, 1, 1)
+WalkSpeedText.BorderSizePixel = 2
+WalkSpeedText.Position = UDim2.new(0.694267511, 0, 0.663316548, 0)
+WalkSpeedText.Size = UDim2.new(0, 72, 0, 18)
+WalkSpeedText.Font = Enum.Font.SourceSans
+WalkSpeedText.Text = ""
+WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
+WalkSpeedText.TextSize = 14
+
+ExitButton.MouseButton1Click : Connect (function()
+RedWoodFucker:Destroy ()
+end)
+TazeAll.MouseButton1Click : Connect(function()
+	for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("tase", v) 
+end
+
+end)
+KillAll.MouseButton1Click : Connect(function()
+	for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("dealDamage", v.Character.Humanoid, 100) 
+end
+end)
+ArrestAll.MouseButton1Click : Connect(function()
+for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("cuff", v) 
+end
+end)
+Weapons.MouseButton1Click : Connect(function()
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M98B")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "ACR")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "L86A2")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M60")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "25"	
+end)
+RemoveAllDoors.MouseButton1Click : Connect(function()
+	game.workspace.AllDoors:remove()
+end)
+Btools.MouseButton1Click : Connect(function()
+local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+tool1.BinType = "Clone"
+tool2.BinType = "GameTool"
+tool3.BinType = "Hammer"
+tool4.BinType = "Script"
+tool5.BinType = "Grab"
+end)
+Team.MouseButton1Click : Connect(function()
+	if(TeamText.Text ~= nil)
+	then
+	game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
+	
+	end
+		
+	
+end)
+WalkSpeed.MouseButton1Click : Connect(function()
+	if(WalkSpeedText.Text ~= nil)
+	then
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedText.Text
+		end
+	
+end)
+MainFrame.Active = true
+MainFrame.Draggable = true
