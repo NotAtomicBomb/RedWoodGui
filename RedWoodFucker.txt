@@ -1,9 +1,11 @@
-loadstring(game:HttpGet('https://pastebin.com/6mQJTqzz',true))()
+loadstring(game:HttpGet('https://pastebin.com/raw/6mQJTqzz',true))()
 local RedWoodFucker = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Bar = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
-local ExitButton = Instance.new("TextLabel")
+local Creator = Instance.new("TextLabel")
+local ExitButton = Instance.new("TextButton")
+local MinimizeButton = Instance.new("TextButton")
 local MainTab = Instance.new("Frame")
 local TazeAll = Instance.new("TextButton")
 local KillAll = Instance.new("TextButton")
@@ -16,6 +18,8 @@ local TeamText = Instance.new("TextBox")
 local Team = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
+local MinFrame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -44,16 +48,45 @@ Title.Text = "Red Wood Fucker"
 Title.TextColor3 = Color3.new(1, 1, 1)
 Title.TextSize = 24
 
+Creator.Name = "Creator"
+Creator.Parent = Bar
+Creator.BackgroundColor3 = Color3.new(1, 1, 1)
+Creator.BackgroundTransparency = 1
+Creator.Position = UDim2.new(-0.0213414934, 0, -0.260869563, 0)
+Creator.Size = UDim2.new(0, 96, 0, 34)
+Creator.Font = Enum.Font.SourceSansBold
+Creator.Text = "AtomiBOmb"
+Creator.TextColor3 = Color3.new(1, 1, 1)
+Creator.TextSize = 15
+
 ExitButton.Name = "ExitButton"
 ExitButton.Parent = Bar
 ExitButton.BackgroundColor3 = Color3.new(1, 1, 1)
 ExitButton.BackgroundTransparency = 1
-ExitButton.Position = UDim2.new(0.710365891, 0, -0.782608628, 0)
-ExitButton.Size = UDim2.new(0, 166, 0, 59)
+ExitButton.Position = UDim2.new(0.923780501, 0, 0, 0)
+ExitButton.Size = UDim2.new(0, 18, 0, 23)
 ExitButton.Font = Enum.Font.SourceSansBold
 ExitButton.Text = "X"
 ExitButton.TextColor3 = Color3.new(1, 1, 1)
 ExitButton.TextSize = 24
+ExitButton.MouseButton1Click : Connect (function()
+RedWoodFucker:Destroy()
+end)
+
+MinimizeButton.Name = "MinimizeButton"
+MinimizeButton.Parent = Bar
+MinimizeButton.BackgroundColor3 = Color3.new(1, 1, 1)
+MinimizeButton.BackgroundTransparency = 1
+MinimizeButton.Position = UDim2.new(0.868902445, 0, -0.260869563, 0)
+MinimizeButton.Size = UDim2.new(0, 18, 0, 32)
+MinimizeButton.Font = Enum.Font.SourceSansBold
+MinimizeButton.Text = "-"
+MinimizeButton.TextColor3 = Color3.new(1, 1, 1)
+MinimizeButton.TextSize = 37
+MinimizeButton.MouseButton1Click : Connect(function()
+	MainFrame.Visible = false;
+	MinFrame.Visible = true;
+end)
 
 MainTab.Name = "MainTab"
 MainTab.Parent = MainFrame
@@ -73,7 +106,12 @@ TazeAll.Font = Enum.Font.SourceSans
 TazeAll.Text = "Taze All"
 TazeAll.TextColor3 = Color3.new(1, 1, 1)
 TazeAll.TextSize = 14
-
+TazeAll.MouseButton1Click : Connect(function()
+	for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("tase", v) 
+	end
+end)
+	
 KillAll.Name = "KillAll"
 KillAll.Parent = MainTab
 KillAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
@@ -84,6 +122,11 @@ KillAll.Font = Enum.Font.SourceSans
 KillAll.Text = "Kill All"
 KillAll.TextColor3 = Color3.new(1, 1, 1)
 KillAll.TextSize = 14
+KillAll.MouseButton1Click : Connect(function()
+	for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("dealDamage", v.Character.Humanoid, 100) 
+end
+end)
 
 ArrestAll.Name = "ArrestAll"
 ArrestAll.Parent = MainTab
@@ -95,6 +138,11 @@ ArrestAll.Font = Enum.Font.SourceSans
 ArrestAll.Text = "Arrest All"
 ArrestAll.TextColor3 = Color3.new(1, 1, 1)
 ArrestAll.TextSize = 14
+ArrestAll.MouseButton1Click : Connect(function()
+for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("cuff", v) 
+end
+end)
 
 Warning.Name = "Warning"
 Warning.Parent = MainTab
@@ -119,6 +167,14 @@ Weapons.Font = Enum.Font.SourceSans
 Weapons.Text = "Starter Pack"
 Weapons.TextColor3 = Color3.new(1, 1, 1)
 Weapons.TextSize = 14
+Weapons.MouseButton1Click : Connect(function()
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M98B")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "ACR")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "L86A2")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M60")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "25"	
+end)
 
 RemoveAllDoors.Name = "RemoveAllDoors"
 RemoveAllDoors.Parent = MainTab
@@ -132,6 +188,9 @@ RemoveAllDoors.TextColor3 = Color3.new(1, 1, 1)
 RemoveAllDoors.TextScaled = true
 RemoveAllDoors.TextSize = 14
 RemoveAllDoors.TextWrapped = true
+RemoveAllDoors.MouseButton1Click : Connect(function()
+	game.workspace.AllDoors:remove()
+end)
 
 Btools.Name = "Btools"
 Btools.Parent = MainTab
@@ -144,81 +203,6 @@ Btools.Text = "Btools"
 Btools.TextColor3 = Color3.new(1, 1, 1)
 Btools.TextSize = 14
 Btools.TextWrapped = true
-
-TeamText.Name = "TeamText"
-TeamText.Parent = MainTab
-TeamText.BackgroundColor3 = Color3.new(1, 1, 1)
-TeamText.BorderSizePixel = 2
-TeamText.Position = UDim2.new(0.694267511, 0, 0.271356761, 0)
-TeamText.Size = UDim2.new(0, 72, 0, 18)
-TeamText.Font = Enum.Font.SourceSans
-TeamText.Text = "Police"
-TeamText.TextColor3 = Color3.new(0, 0, 0)
-TeamText.TextSize = 14
-
-Team.Name = "Team"
-Team.Parent = MainTab
-Team.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Team.BorderSizePixel = 2
-Team.Position = UDim2.new(0.687898099, 0, 0.0804019868, 0)
-Team.Size = UDim2.new(0, 74, 0, 24)
-Team.Font = Enum.Font.SourceSans
-Team.Text = "Team ↓"
-Team.TextColor3 = Color3.new(1, 1, 1)
-Team.TextSize = 14
-
-WalkSpeed.Name = "WalkSpeed"
-WalkSpeed.Parent = MainTab
-WalkSpeed.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-WalkSpeed.BorderSizePixel = 2
-WalkSpeed.Position = UDim2.new(0.684849322, 0, 0.471084565, 0)
-WalkSpeed.Size = UDim2.new(0, 74, 0, 24)
-WalkSpeed.Font = Enum.Font.SourceSans
-WalkSpeed.Text = "WalkSpeed ↓"
-WalkSpeed.TextColor3 = Color3.new(1, 1, 1)
-WalkSpeed.TextSize = 14
-
-WalkSpeedText.Name = "WalkSpeedText"
-WalkSpeedText.Parent = MainTab
-WalkSpeedText.BackgroundColor3 = Color3.new(1, 1, 1)
-WalkSpeedText.BorderSizePixel = 2
-WalkSpeedText.Position = UDim2.new(0.694267511, 0, 0.663316548, 0)
-WalkSpeedText.Size = UDim2.new(0, 72, 0, 18)
-WalkSpeedText.Font = Enum.Font.SourceSans
-WalkSpeedText.Text = ""
-WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
-WalkSpeedText.TextSize = 14
-
-ExitButton.MouseButton1Click : Connect (function()
-RedWoodFucker:Destroy ()
-end)
-TazeAll.MouseButton1Click : Connect(function()
-	for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("tase", v) 
-end
-
-end)
-KillAll.MouseButton1Click : Connect(function()
-	for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("dealDamage", v.Character.Humanoid, 100) 
-end
-end)
-ArrestAll.MouseButton1Click : Connect(function()
-for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("cuff", v) 
-end
-end)
-Weapons.MouseButton1Click : Connect(function()
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M98B")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "ACR")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "L86A2")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M60")
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "25"	
-end)
-RemoveAllDoors.MouseButton1Click : Connect(function()
-	game.workspace.AllDoors:remove()
-end)
 Btools.MouseButton1Click : Connect(function()
 local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
 local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
@@ -231,6 +215,37 @@ tool3.BinType = "Hammer"
 tool4.BinType = "Script"
 tool5.BinType = "Grab"
 end)
+
+TeamText.Name = "TeamText"
+TeamText.Parent = MainTab
+TeamText.BackgroundColor3 = Color3.new(1, 1, 1)
+TeamText.BorderSizePixel = 2
+TeamText.Position = UDim2.new(0.694267511, 0, 0.271356761, 0)
+TeamText.Size = UDim2.new(0, 72, 0, 18)
+TeamText.Font = Enum.Font.SourceSans
+TeamText.Text = ""
+TeamText.TextColor3 = Color3.new(0, 0, 0)
+TeamText.TextSize = 14
+
+	if(TeamText.Text ~= nil)
+	then
+	game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
+	
+	end
+		
+	
+end)
+
+Team.Name = "Team"
+Team.Parent = MainTab
+Team.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Team.BorderSizePixel = 2
+Team.Position = UDim2.new(0.687898099, 0, 0.0804019868, 0)
+Team.Size = UDim2.new(0, 74, 0, 24)
+Team.Font = Enum.Font.SourceSans
+Team.Text = "Team ↓"
+Team.TextColor3 = Color3.new(1, 1, 1)
+Team.TextSize = 14
 Team.MouseButton1Click : Connect(function()
 	if(TeamText.Text ~= nil)
 	then
@@ -240,6 +255,17 @@ Team.MouseButton1Click : Connect(function()
 		
 	
 end)
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = MainTab
+WalkSpeed.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+WalkSpeed.BorderSizePixel = 2
+WalkSpeed.Position = UDim2.new(0.684849322, 0, 0.471084565, 0)
+WalkSpeed.Size = UDim2.new(0, 74, 0, 24)
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "WalkSpeed ↓"
+WalkSpeed.TextColor3 = Color3.new(1, 1, 1)
+WalkSpeed.TextSize = 14
 WalkSpeed.MouseButton1Click : Connect(function()
 	if(WalkSpeedText.Text ~= nil)
 	then
@@ -247,5 +273,36 @@ WalkSpeed.MouseButton1Click : Connect(function()
 		end
 	
 end)
+
+WalkSpeedText.Name = "WalkSpeedText"
+WalkSpeedText.Parent = MainTab
+WalkSpeedText.BackgroundColor3 = Color3.new(1, 1, 1)
+WalkSpeedText.BorderSizePixel = 2
+WalkSpeedText.Position = UDim2.new(0.694267511, 0, 0.663316548, 0)
+WalkSpeedText.Size = UDim2.new(0, 72, 0, 18)
+WalkSpeedText.Font = Enum.Font.SourceSans
+WalkSpeedText.Text = ""
+WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
+WalkSpeedText.TextSize = 14
+
+MinFrame.Name = "MinFrame"
+MinFrame.Parent = RedWoodFucker
+MinFrame.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
+MinFrame.BorderSizePixel = 3
+MinFrame.Position = UDim2.new(-0.0400986969, 0, 0.76289928, 0)
+MinFrame.Size = UDim2.new(0, 100, 0, 100)
+MinFrame.Visible = false
+
+TextButton.Parent = MinFrame
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.Position = UDim2.new(0.748001277, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 13, 0, 100)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "RWF"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextSize = 25
+TextButton.TextWrapped = true
+
 MainFrame.Active = true
 MainFrame.Draggable = true
