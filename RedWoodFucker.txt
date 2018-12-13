@@ -8,7 +8,6 @@ local Bar = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local Creator = Instance.new("TextLabel")
 local ExitButton = Instance.new("TextButton")
-local MinimizeButton = Instance.new("TextButton")
 local MainTab = Instance.new("Frame")
 local TazeAll = Instance.new("TextButton")
 local KillAll = Instance.new("TextButton")
@@ -21,8 +20,6 @@ local TeamText = Instance.new("TextBox")
 local Team = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
-local MinFrame = Instance.new("Frame")
-local MaxButton = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -72,18 +69,6 @@ ExitButton.Font = Enum.Font.SourceSansBold
 ExitButton.Text = "X"
 ExitButton.TextColor3 = Color3.new(1, 1, 1)
 ExitButton.TextSize = 24
-
-MinimizeButton.Name                   = "MinimizeButton"
-MinimizeButton.Parent                 = Bar
-MinimizeButton.BackgroundColor3       = Color3.new(1, 1, 1)
-MinimizeButton.BackgroundTransparency = 1
-MinimizeButton.Position               = UDim2.new(0.868902445, 0, -0.260869563, 0)
-MinimizeButton.Size                   = UDim2.new(0, 18, 0, 32)
-MinimizeButton.Font                   = Enum.Font.SourceSansBold
-MinimizeButton.Text                   = "-"
-MinimizeButton.TextColor3             = Color3.new(1, 1, 1)
-MinimizeButton.TextSize               = 37
-MinimizeButton.Visible                = false
 
 MainTab.Name = "MainTab"
 MainTab.Parent = MainFrame
@@ -219,35 +204,10 @@ WalkSpeedText.Text = ""
 WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
 WalkSpeedText.TextSize = 14
 
-MinFrame.Name = "MinFrame"
-MinFrame.Parent = RedWoodFucker
-MinFrame.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
-MinFrame.BorderSizePixel = 3
-MinFrame.Position = UDim2.new(-0.0400986969, 0, 0.76289928, 0)
-MinFrame.Size = UDim2.new(0, 100, 0, 100)
-MinFrame.Visible = false
+-- Scénario
 
-MaxButton.Name = "MaxButton"
-MaxButton.Parent = MinFrame
-MaxButton.BackgroundColor3 = Color3.new(1, 1, 1)
-MaxButton.BackgroundTransparency = 1
-MaxButton.Position = UDim2.new(0.748001277, 0, 0, 0)
-MaxButton.Size = UDim2.new(0, 13, 0, 100)
-MaxButton.Font = Enum.Font.SourceSansBold
-MaxButton.Text = "RWF"
-MaxButton.TextColor3 = Color3.new(1, 1, 1)
-MaxButton.TextSize = 25
-MaxButton.TextWrapped = true
 ExitButton.MouseButton1Click : Connect (function()
 RedWoodFucker:Destroy()
-end)
-MinimizeButton.MouseButton1Click : Connect(function()
-    if (MainFrame.Visible == true)
-    then
-    MainFrame.Visible = false
-    else
-    MinFrame.Visible = true
-    end
 end)
 TazeAll.MouseButton1Click : Connect(function()
     for _, v in pairs(game.Players:GetChildren()) do
@@ -312,10 +272,7 @@ WalkSpeed.MouseButton1Click : Connect(function()
         end
     
 end)
-MaxButton.MouseButtonClick : Connect(function()
-    MinFrame.Visible = false
-    MainFrame.Visible = true
-    end)
+
 
 MainFrame.Active = true
 MainFrame.Draggable = true
