@@ -1,6 +1,3 @@
-loadstring(game:HttpGet(('https://pastebin.com/raw/6mQJTqzz',true))()
-
-
 local RedWoodFucker = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Bar = Instance.new("Frame")
