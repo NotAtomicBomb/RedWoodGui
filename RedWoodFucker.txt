@@ -15,6 +15,7 @@ local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
 local RemoveAllDoors = Instance.new("TextButton")
 local Btools = Instance.new("TextButton")
+local Tps = Instance.new("TextButton")
 local Next = Instance.new("TextButton")
 local SecondTab = Instance.new("Frame")
 local Taze = Instance.new("TextButton")
@@ -23,6 +24,21 @@ local Arrest = Instance.new("TextButton")
 local NameText = Instance.new("TextBox")
 local Goto = Instance.new("TextButton")
 local Back = Instance.new("TextButton")
+local RWTps = Instance.new("Frame")
+local MainTPSTab = Instance.new("Frame")
+local SecurityRoom = Instance.new("TextButton")
+local Cells = Instance.new("TextButton")
+local Armory = Instance.new("TextButton")
+local FirstGateControls = Instance.new("TextButton")
+local SecondGateControls = Instance.new("TextButton")
+local Roof = Instance.new("TextButton")
+local Atv = Instance.new("TextButton")
+local FugitiveTent = Instance.new("TextButton")
+local SecretRoom = Instance.new("TextButton")
+local HeliPad = Instance.new("TextButton")
+local BrownHouse = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -195,6 +211,18 @@ Btools.TextColor3 = Color3.new(1, 1, 1)
 Btools.TextSize = 14
 Btools.TextWrapped = true
 
+Tps.Name = "Tps"
+Tps.Parent = MainTab
+Tps.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Tps.BorderSizePixel = 2
+Tps.Position = UDim2.new(0.0477707088, 0, 0.783919573, 0)
+Tps.Size = UDim2.new(0, 74, 0, 24)
+Tps.Font = Enum.Font.SourceSans
+Tps.Text = "Tps"
+Tps.TextColor3 = Color3.new(1, 1, 1)
+Tps.TextSize = 14
+Tps.TextWrapped = true
+
 Next.Name = "Next"
 Next.Parent = MainFrame
 Next.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
@@ -285,6 +313,169 @@ Back.Font = Enum.Font.SourceSans
 Back.Text = "< <"
 Back.TextColor3 = Color3.new(1, 1, 1)
 Back.TextSize = 14
+
+RWTps.Name = "RWTps"
+RWTps.Parent = RedWoodFucker
+RWTps.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
+RWTps.BorderSizePixel = 3
+RWTps.Position = UDim2.new(0.744580567, 0, 0.135458171, 0)
+RWTps.Size = UDim2.new(0, 263, 0, 423)
+RWTps.Visible = false
+
+MainTPSTab.Name = "MainTPSTab"
+MainTPSTab.Parent = RWTps
+MainTPSTab.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+MainTPSTab.Position = UDim2.new(0.0341525339, 0, 0.0844715461, 0)
+MainTPSTab.Size = UDim2.new(0, 246, 0, 372)
+
+SecurityRoom.Name = "SecurityRoom"
+SecurityRoom.Parent = MainTPSTab
+SecurityRoom.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+SecurityRoom.BorderSizePixel = 2
+SecurityRoom.Position = UDim2.new(0.0913530141, 0, 0.219978482, 0)
+SecurityRoom.Size = UDim2.new(0, 200, 0, 24)
+SecurityRoom.Font = Enum.Font.SourceSans
+SecurityRoom.Text = "Security Room"
+SecurityRoom.TextColor3 = Color3.new(1, 1, 1)
+SecurityRoom.TextSize = 14
+SecurityRoom.TextWrapped = true
+
+Cells.Name = "Cells"
+Cells.Parent = MainTPSTab
+Cells.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Cells.BorderSizePixel = 2
+Cells.Position = UDim2.new(0.0913530141, 0, 0.0599784926, 0)
+Cells.Size = UDim2.new(0, 200, 0, 24)
+Cells.Font = Enum.Font.SourceSans
+Cells.Text = "Cells"
+Cells.TextColor3 = Color3.new(1, 1, 1)
+Cells.TextSize = 14
+Cells.TextWrapped = true
+
+Armory.Name = "Armory"
+Armory.Parent = MainTPSTab
+Armory.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Armory.BorderSizePixel = 2
+Armory.Position = UDim2.new(0.0875507295, 0, 0.139978498, 0)
+Armory.Size = UDim2.new(0, 200, 0, 24)
+Armory.Font = Enum.Font.SourceSans
+Armory.Text = "Armory"
+Armory.TextColor3 = Color3.new(1, 1, 1)
+Armory.TextSize = 14
+Armory.TextWrapped = true
+
+FirstGateControls.Name = "FirstGateControls"
+FirstGateControls.Parent = MainTPSTab
+FirstGateControls.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+FirstGateControls.BorderSizePixel = 2
+FirstGateControls.Position = UDim2.new(0.0875507295, 0, 0.619978487, 0)
+FirstGateControls.Size = UDim2.new(0, 200, 0, 24)
+FirstGateControls.Font = Enum.Font.SourceSans
+FirstGateControls.Text = "1st Gate Controls"
+FirstGateControls.TextColor3 = Color3.new(1, 1, 1)
+FirstGateControls.TextSize = 14
+FirstGateControls.TextWrapped = true
+
+SecondGateControls.Name = "SecondGateControls"
+SecondGateControls.Parent = MainTPSTab
+SecondGateControls.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+SecondGateControls.BorderSizePixel = 2
+SecondGateControls.Position = UDim2.new(0.0875507295, 0, 0.69997853, 0)
+SecondGateControls.Size = UDim2.new(0, 200, 0, 24)
+SecondGateControls.Font = Enum.Font.SourceSans
+SecondGateControls.Text = "2nd Gate Controls"
+SecondGateControls.TextColor3 = Color3.new(1, 1, 1)
+SecondGateControls.TextSize = 14
+SecondGateControls.TextWrapped = true
+
+Roof.Name = "Roof"
+Roof.Parent = MainTPSTab
+Roof.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Roof.BorderSizePixel = 2
+Roof.Position = UDim2.new(0.0875507295, 0, 0.459978491, 0)
+Roof.Size = UDim2.new(0, 200, 0, 24)
+Roof.Font = Enum.Font.SourceSans
+Roof.Text = "Roof"
+Roof.TextColor3 = Color3.new(1, 1, 1)
+Roof.TextSize = 14
+Roof.TextWrapped = true
+
+Atv.Name = "Atv"
+Atv.Parent = MainTPSTab
+Atv.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Atv.BorderSizePixel = 2
+Atv.Position = UDim2.new(0.0875507295, 0, 0.539978504, 0)
+Atv.Size = UDim2.new(0, 200, 0, 24)
+Atv.Font = Enum.Font.SourceSans
+Atv.Text = "Atv"
+Atv.TextColor3 = Color3.new(1, 1, 1)
+Atv.TextSize = 14
+Atv.TextWrapped = true
+
+FugitiveTent.Name = "FugitiveTent"
+FugitiveTent.Parent = MainTPSTab
+FugitiveTent.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+FugitiveTent.BorderSizePixel = 2
+FugitiveTent.Position = UDim2.new(0.0875507295, 0, 0.779978514, 0)
+FugitiveTent.Size = UDim2.new(0, 200, 0, 24)
+FugitiveTent.Font = Enum.Font.SourceSans
+FugitiveTent.Text = "Fugitive Tent"
+FugitiveTent.TextColor3 = Color3.new(1, 1, 1)
+FugitiveTent.TextSize = 14
+FugitiveTent.TextWrapped = true
+
+SecretRoom.Name = "SecretRoom"
+SecretRoom.Parent = MainTPSTab
+SecretRoom.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+SecretRoom.BorderSizePixel = 2
+SecretRoom.Position = UDim2.new(0.0913530141, 0, 0.299978495, 0)
+SecretRoom.Size = UDim2.new(0, 200, 0, 24)
+SecretRoom.Font = Enum.Font.SourceSans
+SecretRoom.Text = "Secret Room"
+SecretRoom.TextColor3 = Color3.new(1, 1, 1)
+SecretRoom.TextSize = 14
+SecretRoom.TextWrapped = true
+
+HeliPad.Name = "HeliPad"
+HeliPad.Parent = MainTPSTab
+HeliPad.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+HeliPad.BorderSizePixel = 2
+HeliPad.Position = UDim2.new(0.0875507295, 0, 0.379978478, 0)
+HeliPad.Size = UDim2.new(0, 200, 0, 24)
+HeliPad.Font = Enum.Font.SourceSans
+HeliPad.Text = "Heli Pad"
+HeliPad.TextColor3 = Color3.new(1, 1, 1)
+HeliPad.TextSize = 14
+HeliPad.TextWrapped = true
+
+BrownHouse.Name = "BrownHouse"
+BrownHouse.Parent = MainTPSTab
+BrownHouse.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+BrownHouse.BorderSizePixel = 2
+BrownHouse.Position = UDim2.new(0.0875507295, 0, 0.860000014, 0)
+BrownHouse.Size = UDim2.new(0, 200, 0, 24)
+BrownHouse.Font = Enum.Font.SourceSans
+BrownHouse.Text = "BrownHouse"
+BrownHouse.TextColor3 = Color3.new(1, 1, 1)
+BrownHouse.TextSize = 14
+BrownHouse.TextWrapped = true
+
+Frame.Parent = RWTps
+Frame.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0, 0, -0.00169035909, 0)
+Frame.Size = UDim2.new(0, 263, 0, 25)
+
+Title_2.Name = "Title"
+Title_2.Parent = RWTps
+Title_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Title_2.BackgroundTransparency = 1
+Title_2.Position = UDim2.new(0.117870726, 0, -0.0365535244, 0)
+Title_2.Size = UDim2.new(0, 200, 0, 50)
+Title_2.Font = Enum.Font.SourceSansBold
+Title_2.Text = "RedWood Prison TPs"
+Title_2.TextColor3 = Color3.new(1, 1, 1)
+Title_2.TextSize = 24
 
 -- Scénario
 
@@ -426,6 +617,64 @@ Goto.MouseButton1Click : Connect (function()
     end
     
 end)
+Tps.MouseButton1Click : Connect(function()
+	if(Tps.Text == "Tps")
+	then
+	Tps.Text = "Close Tps"
+	RWTps.Visible = true
+	else
+		Tps.Text = "Tps"
+		RWTps.Visible = false
+		end
+	
+end)
+Armory.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(105.805626, 3.98815084, 2.83483744))
+	
+end)
+Atv.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(10.0002174, 4.9727814, -278.929565))
+	
+end)
+Cells.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2.84935522, 3.96974111, 76.8778152))
+	
+end)
+FirstGateControls.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(123.538559, 25.97155, -331.90976))
+	
+end)
+BrownHouse.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-432.90921, -24.0158806, -527.353394))
+	
+end)
+HeliPad.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(263.453125, 4, 64.1009979))
+	
+end)
+Roof.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(52.644783, 33.9684906, -53.3769035))
+	
+end)
+SecondGateControls.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(187.497528, 4.98902416, -422.814575))
+	
+end)
+FugitiveTent.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-616.645569, -24.7896214, -333.158203))
+	
+end)
+SecretRoom.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(116.507835, 3.97595763, -35.0950546))
+	
+end)
+SecurityRoom.MouseButton1Click : Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(55.2727051, 3.99395561, 2.53936005))
+	
+end)
 
 MainFrame.Active = true
 MainFrame.Draggable = true
+
+RWTps.Active =true
+RWTps.Draggable = true
