@@ -290,8 +290,15 @@ end)
 Team.MouseButton1Click : Connect(function()
     if(TeamText.Text ~= "")
     then
+    if(TeamText.Text == "Police" or TeamText.Text == "po" or TeamText.Text == "Po")
+    then
+     game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", "police")
+     elseif (TeamText.Text == "Prisoners" or TeamText.Text == "pr" or TeamText.Text == "Pr" or TeamText.Text == "Prisoner" or TeamText.Text == "prisoner") 
+     then
+     game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", "prisoners")
+     else
     game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
-    
+    end
     end
         
     
