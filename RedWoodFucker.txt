@@ -1,7 +1,5 @@
-loadstring(game:HttpGet('https://pastebin.com/raw/6mQJTqzz',true))()
--- Farewell Infortality.
--- Version: 2.82
--- Instances:
+loadstring(game:HttpGet(('https://pastebin.com/raw/6mQJTqzz',true))()
+
 local RedWoodFucker = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Bar = Instance.new("Frame")
@@ -27,11 +25,13 @@ local Arrest = Instance.new("TextButton")
 local TazeText = Instance.new("TextBox")
 local KillText = Instance.new("TextBox")
 local ArrestText = Instance.new("TextBox")
+local Goto = Instance.new("TextButton")
+local GotoText = Instance.new("TextBox")
 local Back = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-RedWoodFucker.ResetOnSpawn =false
+RedWoodFucker.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = RedWoodFucker
@@ -222,12 +222,11 @@ SecondTab.Position = UDim2.new(0.0206887797, 0, 0.134712398, 0)
 SecondTab.Size = UDim2.new(0, 314, 0, 199)
 SecondTab.Visible = false
 
-
 Taze.Name = "Taze"
 Taze.Parent = SecondTab
 Taze.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
 Taze.BorderSizePixel = 2
-Taze.Position = UDim2.new(0.24203822, 0, 0.180904508, 0)
+Taze.Position = UDim2.new(0.24203822, 0, 0.0904522464, 0)
 Taze.Size = UDim2.new(0, 74, 0, 24)
 Taze.Font = Enum.Font.SourceSans
 Taze.Text = "Taze "
@@ -238,7 +237,7 @@ Kill.Name = "Kill"
 Kill.Parent = SecondTab
 Kill.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
 Kill.BorderSizePixel = 2
-Kill.Position = UDim2.new(0.24203822, 0, 0.371859282, 0)
+Kill.Position = UDim2.new(0.24203822, 0, 0.281407028, 0)
 Kill.Size = UDim2.new(0, 74, 0, 24)
 Kill.Font = Enum.Font.SourceSans
 Kill.Text = "Kill "
@@ -249,7 +248,7 @@ Arrest.Name = "Arrest"
 Arrest.Parent = SecondTab
 Arrest.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
 Arrest.BorderSizePixel = 2
-Arrest.Position = UDim2.new(0.24203822, 0, 0.572864294, 0)
+Arrest.Position = UDim2.new(0.24203822, 0, 0.48241204, 0)
 Arrest.Size = UDim2.new(0, 74, 0, 24)
 Arrest.Font = Enum.Font.SourceSans
 Arrest.Text = "Arrest "
@@ -260,7 +259,7 @@ TazeText.Name = "TazeText"
 TazeText.Parent = SecondTab
 TazeText.BackgroundColor3 = Color3.new(1, 1, 1)
 TazeText.BorderSizePixel = 2
-TazeText.Position = UDim2.new(0.525477707, 0, 0.195979863, 0)
+TazeText.Position = UDim2.new(0.525477707, 0, 0.105527602, 0)
 TazeText.Size = UDim2.new(0, 72, 0, 18)
 TazeText.Font = Enum.Font.SourceSans
 TazeText.Text = ""
@@ -271,7 +270,7 @@ KillText.Name = "KillText"
 KillText.Parent = SecondTab
 KillText.BackgroundColor3 = Color3.new(1, 1, 1)
 KillText.BorderSizePixel = 2
-KillText.Position = UDim2.new(0.525477707, 0, 0.386934638, 0)
+KillText.Position = UDim2.new(0.525477707, 0, 0.296482384, 0)
 KillText.Size = UDim2.new(0, 72, 0, 18)
 KillText.Font = Enum.Font.SourceSans
 KillText.Text = ""
@@ -282,12 +281,34 @@ ArrestText.Name = "ArrestText"
 ArrestText.Parent = SecondTab
 ArrestText.BackgroundColor3 = Color3.new(1, 1, 1)
 ArrestText.BorderSizePixel = 2
-ArrestText.Position = UDim2.new(0.525477707, 0, 0.572864294, 0)
+ArrestText.Position = UDim2.new(0.525477707, 0, 0.48241204, 0)
 ArrestText.Size = UDim2.new(0, 72, 0, 18)
 ArrestText.Font = Enum.Font.SourceSans
 ArrestText.Text = ""
 ArrestText.TextColor3 = Color3.new(0, 0, 0)
 ArrestText.TextSize = 14
+
+Goto.Name = "Goto"
+Goto.Parent = SecondTab
+Goto.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Goto.BorderSizePixel = 2
+Goto.Position = UDim2.new(0.24203822, 0, 0.663316548, 0)
+Goto.Size = UDim2.new(0, 74, 0, 24)
+Goto.Font = Enum.Font.SourceSans
+Goto.Text = "Goto"
+Goto.TextColor3 = Color3.new(1, 1, 1)
+Goto.TextSize = 14
+
+GotoText.Name = "GotoText"
+GotoText.Parent = SecondTab
+GotoText.BackgroundColor3 = Color3.new(1, 1, 1)
+GotoText.BorderSizePixel = 2
+GotoText.Position = UDim2.new(0.525477707, 0, 0.678391933, 0)
+GotoText.Size = UDim2.new(0, 72, 0, 18)
+GotoText.Font = Enum.Font.SourceSans
+GotoText.Text = ""
+GotoText.TextColor3 = Color3.new(0, 0, 0)
+GotoText.TextSize = 14
 
 Back.Name = "Back"
 Back.Parent = MainFrame
@@ -372,64 +393,77 @@ WalkSpeed.MouseButton1Click : Connect(function()
     
 end)
 Next.MouseButton1Click : Connect (function()
-	Next.Visible = false
-	Back.Visible = true
-	SecondTab.Visible = true
-	
+    Next.Visible      = false
+    Back.Visible      = true
+    SecondTab.Visible = true
+    MainTab.Visible   = false
+    
 end)
 Back.MouseButton1Click : Connect (function()
-	Next.Visible = true
-	Back.Visible = false
-	SecondTab.Visible = false
-	
+    Next.Visible      = true
+    Back.Visible      = false
+    SecondTab.Visible = false
+    MainTab.Visible   = true
+    
 end)
 Arrest.MouseButton1Click : Connect (function()
 
-	if (ArrestText.Text ~= "")
-	then 	local b = ArrestText.Text
-	for c,d in
-	pairs(game:GetService("Players"):GetPlayers())do if
-	b:lower()==d.Name:sub(1,b:len()):lower()
-	then
-	game:GetService("Workspace").resources.RemoteEvent:FireServer("cuff",d)
-	end
-	end
-	end
-	
-	
+    if (ArrestText.Text ~= "")
+    then    local b = ArrestText.Text
+    for c,d in
+    pairs(game:GetService("Players"):GetPlayers())do if
+    b:lower()==d.Name:sub(1,b:len()):lower()
+    then
+    game:GetService("Workspace").resources.RemoteEvent:FireServer("cuff",d)
+    end
+    end
+    end
+    
+    
 end)
 Kill.MouseButton1Click : Connect(function()
-	if (KillText.Text ~= "")
-	then 	local b = KillText.Text
-	for c,d in
-	pairs(game:GetService("Players"):GetPlayers())do if
-	b:lower()==d.Name:sub(1,b:len()):lower()
-	then
-	game:GetService("Workspace").resources.RemoteEvent:FireServer("dealDamage",d,100)
-	end
-	end
-	end
-	
-	
-	
+    if (KillText.Text ~= "")
+    then    local b = KillText.Text
+    for c,d in
+    pairs(game:GetService("Players"):GetPlayers())do if
+    b:lower()==d.Name:sub(1,b:len()):lower()
+    then
+    game:GetService("Workspace").resources.RemoteEvent:FireServer("dealDamage",d,100)
+    end
+    end
+    end
+    
+    
+    
 end)
 Taze.MouseButton1Click : Connect (function()
-	if (TazeText.Text ~= "")
-	then 	local b = TazeText.Text
-	for c,d in
-	pairs(game:GetService("Players"):GetPlayers())do if
-	b:lower()==d.Name:sub(1,b:len()):lower()
-	then
-	game:GetService("Workspace").resources.RemoteEvent:FireServer("tase",d)
-	end
-	end
-	end	
-	
-	
-	
+    if (TazeText.Text ~= "")
+    then    local b = TazeText.Text
+    for c,d in
+    pairs(game:GetService("Players"):GetPlayers())do if
+    b:lower()==d.Name:sub(1,b:len()):lower()
+    then
+    game:GetService("Workspace").resources.RemoteEvent:FireServer("tase",d)
+    end
+    end
+    end 
+    
+    
+    
 end)
-
+Goto.MouseButton1Click : Connect (function()
+    if (GotoText.Text ~= "")
+    then    local b = GotoText.Text
+    for c,d in
+    pairs(game:GetService("Players"):GetPlayers())do if
+    b:lower()==d.Name:sub(1,b:len()):lower()
+    then
+    game.Players.LocalPlayer.Character:MoveTo(d.Character.Torso.Position)
+    end
+    end
+    end
+    
+end)
 
 MainFrame.Active = true
 MainFrame.Draggable = true
-
