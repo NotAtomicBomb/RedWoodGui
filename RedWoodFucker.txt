@@ -19,7 +19,7 @@ local Team = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
 local MinFrame = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
+local MinButton = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -84,8 +84,8 @@ MinimizeButton.Text = "-"
 MinimizeButton.TextColor3 = Color3.new(1, 1, 1)
 MinimizeButton.TextSize = 37
 MinimizeButton.MouseButton1Click : Connect(function()
-	MainFrame.Visible = false;
-	MinFrame.Visible = true;
+	MainFrame.Visible = false
+	MinFrame.Visible = true
 end)
 
 MainTab.Name = "MainTab"
@@ -293,16 +293,20 @@ MinFrame.Position = UDim2.new(-0.0400986969, 0, 0.76289928, 0)
 MinFrame.Size = UDim2.new(0, 100, 0, 100)
 MinFrame.Visible = false
 
-TextButton.Parent = MinFrame
-TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
-TextButton.BackgroundTransparency = 1
-TextButton.Position = UDim2.new(0.748001277, 0, 0, 0)
-TextButton.Size = UDim2.new(0, 13, 0, 100)
-TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "RWF"
-TextButton.TextColor3 = Color3.new(1, 1, 1)
-TextButton.TextSize = 25
-TextButton.TextWrapped = true
-
+MinButton.Name = "MinButton"
+MinButton.Parent = MinFrame
+Minbutton.BackgroundColor3 = Color3.new(1, 1, 1)
+Minbutton.BackgroundTransparency = 1
+Minbutton.Position = UDim2.new(0.748001277, 0, 0, 0)
+Minbutton.Size = UDim2.new(0, 13, 0, 100)
+Minbutton.Font = Enum.Font.SourceSansBold
+Minbutton.Text = "RWF"
+Minbutton.TextColor3 = Color3.new(1, 1, 1)
+Minbutton.TextSize = 25
+Minbutton.TextWrapped = true
+Minbutton.MouseButtonClick : Connect(function()
+	MinFrame.Visible = false
+	MainFrame.Visible = true
+	end)
 MainFrame.Active = true
 MainFrame.Draggable = true
