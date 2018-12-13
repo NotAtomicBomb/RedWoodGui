@@ -1,4 +1,7 @@
 loadstring(game:HttpGet('https://pastebin.com/raw/6mQJTqzz',true))()
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
 local RedWoodFucker = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Bar = Instance.new("Frame")
@@ -19,7 +22,7 @@ local Team = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
 local MinFrame = Instance.new("Frame")
-local MinButton = Instance.new("TextButton")
+local MaxButton = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -69,24 +72,18 @@ ExitButton.Font = Enum.Font.SourceSansBold
 ExitButton.Text = "X"
 ExitButton.TextColor3 = Color3.new(1, 1, 1)
 ExitButton.TextSize = 24
-ExitButton.MouseButton1Click : Connect (function()
-RedWoodFucker:Destroy()
-end)
 
-MinimizeButton.Name = "MinimizeButton"
-MinimizeButton.Parent = Bar
-MinimizeButton.BackgroundColor3 = Color3.new(1, 1, 1)
+MinimizeButton.Name                   = "MinimizeButton"
+MinimizeButton.Parent                 = Bar
+MinimizeButton.BackgroundColor3       = Color3.new(1, 1, 1)
 MinimizeButton.BackgroundTransparency = 1
-MinimizeButton.Position = UDim2.new(0.868902445, 0, -0.260869563, 0)
-MinimizeButton.Size = UDim2.new(0, 18, 0, 32)
-MinimizeButton.Font = Enum.Font.SourceSansBold
-MinimizeButton.Text = "-"
-MinimizeButton.TextColor3 = Color3.new(1, 1, 1)
-MinimizeButton.TextSize = 37
-MinimizeButton.MouseButton1Click : Connect(function()
-	MainFrame.Visible = false
-	MinFrame.Visible = true
-end)
+MinimizeButton.Position               = UDim2.new(0.868902445, 0, -0.260869563, 0)
+MinimizeButton.Size                   = UDim2.new(0, 18, 0, 32)
+MinimizeButton.Font                   = Enum.Font.SourceSansBold
+MinimizeButton.Text                   = "-"
+MinimizeButton.TextColor3             = Color3.new(1, 1, 1)
+MinimizeButton.TextSize               = 37
+MinimizeButton.Visible                = false
 
 MainTab.Name = "MainTab"
 MainTab.Parent = MainFrame
@@ -106,12 +103,7 @@ TazeAll.Font = Enum.Font.SourceSans
 TazeAll.Text = "Taze All"
 TazeAll.TextColor3 = Color3.new(1, 1, 1)
 TazeAll.TextSize = 14
-TazeAll.MouseButton1Click : Connect(function()
-	for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("tase", v) 
-	end
-end)
-	
+
 KillAll.Name = "KillAll"
 KillAll.Parent = MainTab
 KillAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
@@ -122,11 +114,6 @@ KillAll.Font = Enum.Font.SourceSans
 KillAll.Text = "Kill All"
 KillAll.TextColor3 = Color3.new(1, 1, 1)
 KillAll.TextSize = 14
-KillAll.MouseButton1Click : Connect(function()
-	for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("dealDamage", v.Character.Humanoid, 100) 
-end
-end)
 
 ArrestAll.Name = "ArrestAll"
 ArrestAll.Parent = MainTab
@@ -138,11 +125,6 @@ ArrestAll.Font = Enum.Font.SourceSans
 ArrestAll.Text = "Arrest All"
 ArrestAll.TextColor3 = Color3.new(1, 1, 1)
 ArrestAll.TextSize = 14
-ArrestAll.MouseButton1Click : Connect(function()
-for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("cuff", v) 
-end
-end)
 
 Warning.Name = "Warning"
 Warning.Parent = MainTab
@@ -167,14 +149,6 @@ Weapons.Font = Enum.Font.SourceSans
 Weapons.Text = "Starter Pack"
 Weapons.TextColor3 = Color3.new(1, 1, 1)
 Weapons.TextSize = 14
-Weapons.MouseButton1Click : Connect(function()
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M98B")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "ACR")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "L86A2")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M60")
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "25"	
-end)
 
 RemoveAllDoors.Name = "RemoveAllDoors"
 RemoveAllDoors.Parent = MainTab
@@ -188,9 +162,6 @@ RemoveAllDoors.TextColor3 = Color3.new(1, 1, 1)
 RemoveAllDoors.TextScaled = true
 RemoveAllDoors.TextSize = 14
 RemoveAllDoors.TextWrapped = true
-RemoveAllDoors.MouseButton1Click : Connect(function()
-	game.workspace.AllDoors:remove()
-end)
 
 Btools.Name = "Btools"
 Btools.Parent = MainTab
@@ -203,18 +174,6 @@ Btools.Text = "Btools"
 Btools.TextColor3 = Color3.new(1, 1, 1)
 Btools.TextSize = 14
 Btools.TextWrapped = true
-Btools.MouseButton1Click : Connect(function()
-local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-tool1.BinType = "Clone"
-tool2.BinType = "GameTool"
-tool3.BinType = "Hammer"
-tool4.BinType = "Script"
-tool5.BinType = "Grab"
-end)
 
 TeamText.Name = "TeamText"
 TeamText.Parent = MainTab
@@ -227,15 +186,6 @@ TeamText.Text = ""
 TeamText.TextColor3 = Color3.new(0, 0, 0)
 TeamText.TextSize = 14
 
-	if(TeamText.Text ~= nil)
-	then
-	game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
-	
-	end
-		
-	
-end)
-
 Team.Name = "Team"
 Team.Parent = MainTab
 Team.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
@@ -246,15 +196,6 @@ Team.Font = Enum.Font.SourceSans
 Team.Text = "Team ↓"
 Team.TextColor3 = Color3.new(1, 1, 1)
 Team.TextSize = 14
-Team.MouseButton1Click : Connect(function()
-	if(TeamText.Text ~= nil)
-	then
-	game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
-	
-	end
-		
-	
-end)
 
 WalkSpeed.Name = "WalkSpeed"
 WalkSpeed.Parent = MainTab
@@ -266,13 +207,6 @@ WalkSpeed.Font = Enum.Font.SourceSans
 WalkSpeed.Text = "WalkSpeed ↓"
 WalkSpeed.TextColor3 = Color3.new(1, 1, 1)
 WalkSpeed.TextSize = 14
-WalkSpeed.MouseButton1Click : Connect(function()
-	if(WalkSpeedText.Text ~= nil)
-	then
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedText.Text
-		end
-	
-end)
 
 WalkSpeedText.Name = "WalkSpeedText"
 WalkSpeedText.Parent = MainTab
@@ -293,20 +227,89 @@ MinFrame.Position = UDim2.new(-0.0400986969, 0, 0.76289928, 0)
 MinFrame.Size = UDim2.new(0, 100, 0, 100)
 MinFrame.Visible = false
 
-MinButton.Name = "MinButton"
-MinButton.Parent = MinFrame
-Minbutton.BackgroundColor3 = Color3.new(1, 1, 1)
-Minbutton.BackgroundTransparency = 1
-Minbutton.Position = UDim2.new(0.748001277, 0, 0, 0)
-Minbutton.Size = UDim2.new(0, 13, 0, 100)
-Minbutton.Font = Enum.Font.SourceSansBold
-Minbutton.Text = "RWF"
-Minbutton.TextColor3 = Color3.new(1, 1, 1)
-Minbutton.TextSize = 25
-Minbutton.TextWrapped = true
-Minbutton.MouseButtonClick : Connect(function()
-	MinFrame.Visible = false
-	MainFrame.Visible = true
-	end)
+MaxButton.Name = "MaxButton"
+MaxButton.Parent = MinFrame
+MaxButton.BackgroundColor3 = Color3.new(1, 1, 1)
+MaxButton.BackgroundTransparency = 1
+MaxButton.Position = UDim2.new(0.748001277, 0, 0, 0)
+MaxButton.Size = UDim2.new(0, 13, 0, 100)
+MaxButton.Font = Enum.Font.SourceSansBold
+MaxButton.Text = "RWF"
+MaxButton.TextColor3 = Color3.new(1, 1, 1)
+MaxButton.TextSize = 25
+MaxButton.TextWrapped = true
+ExitButton.MouseButton1Click : Connect (function()
+RedWoodFucker:Destroy()
+end)
+MinimizeButton.MouseButton1Click : Connect(function()
+    if (MainFrame.Visible == true)
+    then
+    MainFrame.Visible = false
+    else
+    MinFrame.Visible = true
+    end
+end)
+TazeAll.MouseButton1Click : Connect(function()
+    for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("tase", v) 
+    end
+end)
+KillAll.MouseButton1Click : Connect(function()
+    for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("dealDamage", v.Character.Humanoid, 100) 
+end
+end)
+ArrestAll.MouseButton1Click : Connect(function()
+for _, v in pairs(game.Players:GetChildren()) do
+game.Workspace.resources.RemoteEvent:FireServer("cuff", v) 
+end
+end)
+Weapons.MouseButton1Click : Connect(function()
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M98B")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "ACR")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "L86A2")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M60")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "25"    
+end)
+RemoveAllDoors.MouseButton1Click : Connect(function()
+    game.workspace.AllDoors:remove()
+end)
+Btools.MouseButton1Click : Connect(function()
+local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+tool1.BinType = "Clone"
+tool2.BinType = "GameTool"
+tool3.BinType = "Hammer"
+tool4.BinType = "Script"
+tool5.BinType = "Grab"
+end)
+Team.MouseButton1Click : Connect(function()
+    if(TeamText.Text ~= "")
+    then
+    game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
+    
+    end
+        
+    
+end)
+WalkSpeed.MouseButton1Click : Connect(function()
+    if(WalkSpeedText.Text ~= "")
+    then
+    
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedText.Text
+        print("WalkSpeed has been changed")
+        end
+    
+end)
+MaxButton.MouseButtonClick : Connect(function()
+    MinFrame.Visible = false
+    MainFrame.Visible = true
+    end)
+
 MainFrame.Active = true
 MainFrame.Draggable = true
+
