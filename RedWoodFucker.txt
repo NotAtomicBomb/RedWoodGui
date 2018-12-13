@@ -12,17 +12,26 @@ local MainTab = Instance.new("Frame")
 local TazeAll = Instance.new("TextButton")
 local KillAll = Instance.new("TextButton")
 local ArrestAll = Instance.new("TextButton")
-local Warning = Instance.new("TextLabel")
 local Weapons = Instance.new("TextButton")
-local RemoveAllDoors = Instance.new("TextButton")
-local Btools = Instance.new("TextButton")
 local TeamText = Instance.new("TextBox")
 local Team = Instance.new("TextButton")
 local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
+local RemoveAllDoors = Instance.new("TextButton")
+local Btools = Instance.new("TextButton")
+local Next = Instance.new("TextButton")
+local SecondTab = Instance.new("Frame")
+local Taze = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local Arrest = Instance.new("TextButton")
+local TazeText = Instance.new("TextBox")
+local KillText = Instance.new("TextBox")
+local ArrestText = Instance.new("TextBox")
+local Back = Instance.new("TextButton")
 --Properties:
 RedWoodFucker.Name = "RedWoodFucker"
 RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RedWoodFucker.ResetOnSpawn =false
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = RedWoodFucker
@@ -111,19 +120,6 @@ ArrestAll.Text = "Arrest All"
 ArrestAll.TextColor3 = Color3.new(1, 1, 1)
 ArrestAll.TextSize = 14
 
-Warning.Name = "Warning"
-Warning.Parent = MainTab
-Warning.BackgroundColor3 = Color3.new(1, 1, 1)
-Warning.BackgroundTransparency = 1
-Warning.Position = UDim2.new(0.0191082805, 0, 0.633165836, 0)
-Warning.Size = UDim2.new(0, 118, 0, 50)
-Warning.Font = Enum.Font.SourceSans
-Warning.Text = "Warning! It shows your name when you arrest someone"
-Warning.TextColor3 = Color3.new(1, 0, 0.0156863)
-Warning.TextScaled = true
-Warning.TextSize = 14
-Warning.TextWrapped = true
-
 Weapons.Name = "Weapons"
 Weapons.Parent = MainTab
 Weapons.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
@@ -134,31 +130,6 @@ Weapons.Font = Enum.Font.SourceSans
 Weapons.Text = "Starter Pack"
 Weapons.TextColor3 = Color3.new(1, 1, 1)
 Weapons.TextSize = 14
-
-RemoveAllDoors.Name = "RemoveAllDoors"
-RemoveAllDoors.Parent = MainTab
-RemoveAllDoors.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-RemoveAllDoors.BorderSizePixel = 2
-RemoveAllDoors.Position = UDim2.new(0.382165611, 0, 0.271356761, 0)
-RemoveAllDoors.Size = UDim2.new(0, 74, 0, 24)
-RemoveAllDoors.Font = Enum.Font.SourceSans
-RemoveAllDoors.Text = "Remove All Doors"
-RemoveAllDoors.TextColor3 = Color3.new(1, 1, 1)
-RemoveAllDoors.TextScaled = true
-RemoveAllDoors.TextSize = 14
-RemoveAllDoors.TextWrapped = true
-
-Btools.Name = "Btools"
-Btools.Parent = MainTab
-Btools.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Btools.BorderSizePixel = 2
-Btools.Position = UDim2.new(0.382165611, 0, 0.472361803, 0)
-Btools.Size = UDim2.new(0, 74, 0, 24)
-Btools.Font = Enum.Font.SourceSans
-Btools.Text = "Btools"
-Btools.TextColor3 = Color3.new(1, 1, 1)
-Btools.TextSize = 14
-Btools.TextWrapped = true
 
 TeamText.Name = "TeamText"
 TeamText.Parent = MainTab
@@ -203,6 +174,134 @@ WalkSpeedText.Font = Enum.Font.SourceSans
 WalkSpeedText.Text = ""
 WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
 WalkSpeedText.TextSize = 14
+
+RemoveAllDoors.Name = "RemoveAllDoors"
+RemoveAllDoors.Parent = MainTab
+RemoveAllDoors.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+RemoveAllDoors.BorderSizePixel = 2
+RemoveAllDoors.Position = UDim2.new(0.382165611, 0, 0.271356761, 0)
+RemoveAllDoors.Size = UDim2.new(0, 74, 0, 24)
+RemoveAllDoors.Font = Enum.Font.SourceSans
+RemoveAllDoors.Text = "Remove All Doors"
+RemoveAllDoors.TextColor3 = Color3.new(1, 1, 1)
+RemoveAllDoors.TextScaled = true
+RemoveAllDoors.TextSize = 14
+RemoveAllDoors.TextWrapped = true
+
+Btools.Name = "Btools"
+Btools.Parent = MainTab
+Btools.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Btools.BorderSizePixel = 2
+Btools.Position = UDim2.new(0.382165611, 0, 0.472361803, 0)
+Btools.Size = UDim2.new(0, 74, 0, 24)
+Btools.Font = Enum.Font.SourceSans
+Btools.Text = "Btools"
+Btools.TextColor3 = Color3.new(1, 1, 1)
+Btools.TextSize = 14
+Btools.TextWrapped = true
+
+Next.Name = "Next"
+Next.Parent = MainFrame
+Next.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Next.BorderSizePixel = 0
+Next.LayoutOrder = 1
+Next.Position = UDim2.new(0.793129623, 0, 0.847968936, 0)
+Next.Size = UDim2.new(0, 57, 0, 22)
+Next.ZIndex = 3
+Next.Font = Enum.Font.SourceSans
+Next.Text = "> >"
+Next.TextColor3 = Color3.new(1, 1, 1)
+Next.TextSize = 14
+
+SecondTab.Name = "SecondTab"
+SecondTab.Parent = MainFrame
+SecondTab.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+SecondTab.BorderColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+SecondTab.LayoutOrder = -5
+SecondTab.Position = UDim2.new(0.0206887797, 0, 0.134712398, 0)
+SecondTab.Size = UDim2.new(0, 314, 0, 199)
+SecondTab.Visible = false
+
+
+Taze.Name = "Taze"
+Taze.Parent = SecondTab
+Taze.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Taze.BorderSizePixel = 2
+Taze.Position = UDim2.new(0.24203822, 0, 0.180904508, 0)
+Taze.Size = UDim2.new(0, 74, 0, 24)
+Taze.Font = Enum.Font.SourceSans
+Taze.Text = "Taze "
+Taze.TextColor3 = Color3.new(1, 1, 1)
+Taze.TextSize = 14
+
+Kill.Name = "Kill"
+Kill.Parent = SecondTab
+Kill.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Kill.BorderSizePixel = 2
+Kill.Position = UDim2.new(0.24203822, 0, 0.371859282, 0)
+Kill.Size = UDim2.new(0, 74, 0, 24)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill "
+Kill.TextColor3 = Color3.new(1, 1, 1)
+Kill.TextSize = 14
+
+Arrest.Name = "Arrest"
+Arrest.Parent = SecondTab
+Arrest.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Arrest.BorderSizePixel = 2
+Arrest.Position = UDim2.new(0.24203822, 0, 0.572864294, 0)
+Arrest.Size = UDim2.new(0, 74, 0, 24)
+Arrest.Font = Enum.Font.SourceSans
+Arrest.Text = "Arrest "
+Arrest.TextColor3 = Color3.new(1, 1, 1)
+Arrest.TextSize = 14
+
+TazeText.Name = "TazeText"
+TazeText.Parent = SecondTab
+TazeText.BackgroundColor3 = Color3.new(1, 1, 1)
+TazeText.BorderSizePixel = 2
+TazeText.Position = UDim2.new(0.525477707, 0, 0.195979863, 0)
+TazeText.Size = UDim2.new(0, 72, 0, 18)
+TazeText.Font = Enum.Font.SourceSans
+TazeText.Text = ""
+TazeText.TextColor3 = Color3.new(0, 0, 0)
+TazeText.TextSize = 14
+
+KillText.Name = "KillText"
+KillText.Parent = SecondTab
+KillText.BackgroundColor3 = Color3.new(1, 1, 1)
+KillText.BorderSizePixel = 2
+KillText.Position = UDim2.new(0.525477707, 0, 0.386934638, 0)
+KillText.Size = UDim2.new(0, 72, 0, 18)
+KillText.Font = Enum.Font.SourceSans
+KillText.Text = ""
+KillText.TextColor3 = Color3.new(0, 0, 0)
+KillText.TextSize = 14
+
+ArrestText.Name = "ArrestText"
+ArrestText.Parent = SecondTab
+ArrestText.BackgroundColor3 = Color3.new(1, 1, 1)
+ArrestText.BorderSizePixel = 2
+ArrestText.Position = UDim2.new(0.525477707, 0, 0.572864294, 0)
+ArrestText.Size = UDim2.new(0, 72, 0, 18)
+ArrestText.Font = Enum.Font.SourceSans
+ArrestText.Text = ""
+ArrestText.TextColor3 = Color3.new(0, 0, 0)
+ArrestText.TextSize = 14
+
+Back.Name = "Back"
+Back.Parent = MainFrame
+Back.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Back.BorderSizePixel = 0
+Back.LayoutOrder = 1
+Back.Position = UDim2.new(0.0370320678, 0, 0.847968936, 0)
+Back.Size = UDim2.new(0, 57, 0, 22)
+Back.Visible = false
+Back.ZIndex = 3
+Back.Font = Enum.Font.SourceSans
+Back.Text = "< <"
+Back.TextColor3 = Color3.new(1, 1, 1)
+Back.TextSize = 14
 
 -- Scénario
 
@@ -271,6 +370,63 @@ WalkSpeed.MouseButton1Click : Connect(function()
         print("WalkSpeed has been changed")
         end
     
+end)
+Next.MouseButton1Click : Connect (function()
+	Next.Visible = false
+	Back.Visible = true
+	SecondTab.Visible = true
+	
+end)
+Back.MouseButton1Click : Connect (function()
+	Next.Visible = true
+	Back.Visible = false
+	SecondTab.Visible = false
+	
+end)
+Arrest.MouseButton1Click : Connect (function()
+
+	if (ArrestText.Text ~= "")
+	then 	local b = ArrestText.Text
+	for c,d in
+	pairs(game:GetService("Players"):GetPlayers())do if
+	b:lower()==d.Name:sub(1,b:len()):lower()
+	then
+	game:GetService("Workspace").resources.RemoteEvent:FireServer("cuff",d)
+	end
+	end
+	end
+	
+	
+end)
+Kill.MouseButton1Click : Connect(function()
+	if (KillText.Text ~= "")
+	then 	local b = KillText.Text
+	for c,d in
+	pairs(game:GetService("Players"):GetPlayers())do if
+	b:lower()==d.Name:sub(1,b:len()):lower()
+	then
+	game:GetService("Workspace").resources.RemoteEvent:FireServer("dealDamage",d,100)
+	end
+	end
+	end
+	
+	
+	
+end)
+Taze.MouseButton1Click : Connect (function()
+	if (TazeText.Text ~= "")
+	then 	local b = TazeText.Text
+	for c,d in
+	pairs(game:GetService("Players"):GetPlayers())do if
+	b:lower()==d.Name:sub(1,b:len()):lower()
+	then
+	game:GetService("Workspace").resources.RemoteEvent:FireServer("tase",d)
+	end
+	end
+	end	
+	
+	
+	
 end)
 
 
