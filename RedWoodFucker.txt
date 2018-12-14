@@ -532,9 +532,10 @@ Team.MouseButton1Click : Connect(function()
      elseif (TeamText.Text == "Fugitive" or TeamText.Text == "fugitve" or TeamText.Text == "fu" or TeamText.Text == "Fu")
      then
      local lastPlace = game.Players.LocalPlayer.Character.Torso.Position
+     wait(0.3)
       game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-601.4, -24.3, -332.1))
-    	wait(0.2)
-	 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(lastPlace))
+      wait(0.1)
+     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(lastPlace))
    
      else
     game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
@@ -628,59 +629,59 @@ Goto.MouseButton1Click : Connect (function()
     
 end)
 Tps.MouseButton1Click : Connect(function()
-	if(Tps.Text == "Tps")
-	then
-	Tps.Text = "Close Tps"
-	RWTps.Visible = true
-	else
-		Tps.Text = "Tps"
-		RWTps.Visible = false
-		end
-	
+    if(Tps.Text == "Tps")
+    then
+    Tps.Text = "Close Tps"
+    RWTps.Visible = true
+    else
+        Tps.Text = "Tps"
+        RWTps.Visible = false
+        end
+    
 end)
 Armory.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(105.805626, 3.98815084, 2.83483744))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(105.805626, 3.98815084, 2.83483744))
+    
 end)
 Atv.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(10.0002174, 4.9727814, -278.929565))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(10.0002174, 4.9727814, -278.929565))
+    
 end)
 Cells.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2.84935522, 3.96974111, 76.8778152))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2.84935522, 3.96974111, 76.8778152))
+    
 end)
 FirstGateControls.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(123.538559, 25.97155, -331.90976))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(123.538559, 25.97155, -331.90976))
+    
 end)
 BrownHouse.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-432.90921, -24.0158806, -527.353394))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-432.90921, -24.0158806, -527.353394))
+    
 end)
 HeliPad.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(263.453125, 4, 64.1009979))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(263.453125, 4, 64.1009979))
+    
 end)
 Roof.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(52.644783, 33.9684906, -53.3769035))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(52.644783, 33.9684906, -53.3769035))
+    
 end)
 SecondGateControls.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(187.497528, 4.98902416, -422.814575))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(187.497528, 4.98902416, -422.814575))
+    
 end)
 FugitiveTent.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-616.645569, -24.7896214, -333.158203))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-616.645569, -24.7896214, -333.158203))
+    
 end)
 SecretRoom.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(116.507835, 3.97595763, -35.0950546))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(116.507835, 3.97595763, -35.0950546))
+    
 end)
 SecurityRoom.MouseButton1Click : Connect(function()
-	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(55.2727051, 3.99395561, 2.53936005))
-	
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(55.2727051, 3.99395561, 2.53936005))
+    
 end)
 
 MainFrame.Active = true
