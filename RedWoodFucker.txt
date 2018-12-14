@@ -529,7 +529,7 @@ Team.MouseButton1Click : Connect(function()
      elseif (TeamText.Text == "Prisoners" or TeamText.Text == "pr" or TeamText.Text == "Pr" or TeamText.Text == "Prisoner" or TeamText.Text == "prisoner") 
      then
      game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", "prisoners")
-     elseif (TeamText.Text == "Fugitive" or TeamText.Text == "fugitve or TeamText.Text == "fu" or TeamText.Text == "Fu")
+     elseif (TeamText.Text == "Fugitive" or TeamText.Text == "fugitve" or TeamText.Text == "fu" or TeamText.Text == "Fu")
      then
      local lastPlace = game.Players.LocalPlayer.Character.Torso.Position
       game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-601.4, -24.3, -332.1))
