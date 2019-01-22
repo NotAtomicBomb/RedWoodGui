@@ -18,10 +18,13 @@ local Arrest = Instance.new("TextButton")
 local NameText = Instance.new("TextBox")
 local Goto = Instance.new("TextButton")
 local Back = Instance.new("TextButton")
+local ClickKill = Instance.new("TextButton")
 --Properties:
 RocitizensFucker.Name = "RocitizensFucker"
 RocitizensFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 RocitizensFucker.ResetOnSpawn = false
+
+
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = RocitizensFucker
@@ -102,6 +105,17 @@ Tps.Text = "Tps"
 Tps.TextColor3 = Color3.new(1, 1, 1)
 Tps.TextSize = 14
 Tps.TextWrapped = true
+
+ClickKill.Name = "ClickKill"
+ClickKill.Parent = MainFrame
+ClickKill.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+ClickKill.BorderSizePixel = 2
+ClickKill.Position = UDim2.new(0.420382202, 0, 0.319390059, 20)
+ClickKill.Size = UDim2.new(0, 97, 0, 31)
+ClickKill.Font = Enum.Font.SourceSans
+ClickKill.Text = "Click Kill"
+ClickKill.TextColor3 = Color3.new(1, 1, 1)
+ClickKill.TextSize = 14
 
 Kill.Name = "Kill"
 Kill.Parent = MainTab
@@ -292,6 +306,25 @@ Remote:InvokeServer(unpack(Arguments))
 		
 		end
 	end
+	
+end)
+ClickKill.MouseButton1Click : Connect(function()
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	mouse.Button1Down:connect(function()
+	local obj = mouse.Target.Parent:GetFullName()
+	local objnamer = mouse.Target.Name
+	local objname = tostring(objnamer)
+
+	local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+
+	local Arguments = {
+        [1] = obj,
+        [2] = objname
+		}
+
+		Remote:InvokeServer(unpack(Arguments))
+
+end)
 	
 end)
 
