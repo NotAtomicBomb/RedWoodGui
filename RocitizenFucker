@@ -1,0 +1,290 @@
+local RocitizensFucker = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Creator = Instance.new("TextLabel")
+local ExitButton = Instance.new("TextButton")
+local MainTab = Instance.new("Frame")
+local WalkSpeedText = Instance.new("TextBox")
+local Tps = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local DestroyWorld = Instance.new("TextButton")
+local Next = Instance.new("TextButton")
+local SecondTab = Instance.new("Frame")
+local Taze = Instance.new("TextButton")
+local Kill_2 = Instance.new("TextButton")
+local Arrest = Instance.new("TextButton")
+local NameText = Instance.new("TextBox")
+local Goto = Instance.new("TextButton")
+local Back = Instance.new("TextButton")
+--Properties:
+RocitizensFucker.Name = "RocitizensFucker"
+RocitizensFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RocitizensFucker.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = RocitizensFucker
+MainFrame.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
+MainFrame.BorderSizePixel = 3
+MainFrame.Position = UDim2.new(0.0137980469, 0, 0.42151165, 0)
+MainFrame.Size = UDim2.new(0, 328, 0, 240)
+
+Bar.Name = "Bar"
+Bar.Parent = MainFrame
+Bar.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Bar.BorderSizePixel = 3
+Bar.Size = UDim2.new(0, 328, 0, 23)
+
+Title.Name = "Title"
+Title.Parent = Bar
+Title.BackgroundColor3 = Color3.new(1, 1, 1)
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0.246951193, 0, -0.782608628, 0)
+Title.Size = UDim2.new(0, 166, 0, 59)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Rocitizens Fucker"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 24
+
+Creator.Name = "Creator"
+Creator.Parent = Bar
+Creator.BackgroundColor3 = Color3.new(1, 1, 1)
+Creator.BackgroundTransparency = 1
+Creator.Position = UDim2.new(-0.0213414934, 0, -0.260869563, 0)
+Creator.Size = UDim2.new(0, 96, 0, 34)
+Creator.Visible = false
+Creator.Font = Enum.Font.SourceSansBold
+Creator.Text = "AtomiBOmb"
+Creator.TextColor3 = Color3.new(1, 1, 1)
+Creator.TextSize = 15
+
+ExitButton.Name = "ExitButton"
+ExitButton.Parent = Bar
+ExitButton.BackgroundColor3 = Color3.new(1, 1, 1)
+ExitButton.BackgroundTransparency = 1
+ExitButton.Position = UDim2.new(0.923780501, 0, 0, 0)
+ExitButton.Size = UDim2.new(0, 18, 0, 23)
+ExitButton.Font = Enum.Font.SourceSansBold
+ExitButton.Text = "X"
+ExitButton.TextColor3 = Color3.new(1, 1, 1)
+ExitButton.TextSize = 24
+
+MainTab.Name = "MainTab"
+MainTab.Parent = MainFrame
+MainTab.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+MainTab.BorderColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+MainTab.LayoutOrder = -5
+MainTab.Position = UDim2.new(0.021341417, 0, 0.138592407, 0)
+MainTab.Size = UDim2.new(0, 314, 0, 199)
+
+WalkSpeedText.Name = "WalkSpeedText"
+WalkSpeedText.Parent = MainTab
+WalkSpeedText.BackgroundColor3 = Color3.new(1, 1, 1)
+WalkSpeedText.BorderSizePixel = 2
+WalkSpeedText.Position = UDim2.new(0.261146456, 0, 0.713567853, 0)
+WalkSpeedText.Size = UDim2.new(0, 128, 0, 32)
+WalkSpeedText.Font = Enum.Font.SourceSans
+WalkSpeedText.PlaceholderText = "Target"
+WalkSpeedText.Text = ""
+WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
+WalkSpeedText.TextSize = 14
+
+Tps.Name = "Tps"
+Tps.Parent = MainTab
+Tps.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Tps.BorderSizePixel = 2
+Tps.Position = UDim2.new(0.0477707088, 0, 0.783919573, 0)
+Tps.Size = UDim2.new(0, 74, 0, 24)
+Tps.Visible = false
+Tps.Font = Enum.Font.SourceSans
+Tps.Text = "Tps"
+Tps.TextColor3 = Color3.new(1, 1, 1)
+Tps.TextSize = 14
+Tps.TextWrapped = true
+
+Kill.Name = "Kill"
+Kill.Parent = MainTab
+Kill.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Kill.BorderSizePixel = 2
+Kill.Position = UDim2.new(0.235668838, 0, 0.381909549, 0)
+Kill.Size = UDim2.new(0, 145, 0, 47)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill"
+Kill.TextColor3 = Color3.new(1, 1, 1)
+Kill.TextSize = 14
+
+DestroyWorld.Name = "DestroyWorld"
+DestroyWorld.Parent = MainTab
+DestroyWorld.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+DestroyWorld.BorderSizePixel = 2
+DestroyWorld.Position = UDim2.new(0.261146486, 0, 0.104210168, 0)
+DestroyWorld.Size = UDim2.new(0, 124, 0, 40)
+DestroyWorld.Font = Enum.Font.SourceSans
+DestroyWorld.Text = "Destroy World"
+DestroyWorld.TextColor3 = Color3.new(1, 1, 1)
+DestroyWorld.TextSize = 14
+
+Next.Name = "Next"
+Next.Parent = MainFrame
+Next.Active = false
+Next.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Next.BorderSizePixel = 0
+Next.LayoutOrder = 1
+Next.Position = UDim2.new(0.793129623, 0, 0.847968936, 0)
+Next.Size = UDim2.new(0, 57, 0, 22)
+Next.Visible = false
+Next.ZIndex = 3
+Next.Font = Enum.Font.SourceSans
+Next.Text = "> >"
+Next.TextColor3 = Color3.new(1, 1, 1)
+Next.TextSize = 14
+
+SecondTab.Name = "SecondTab"
+SecondTab.Parent = MainFrame
+SecondTab.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+SecondTab.BorderColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+SecondTab.LayoutOrder = -5
+SecondTab.Position = UDim2.new(0.0206887797, 0, 0.134712398, 0)
+SecondTab.Size = UDim2.new(0, 314, 0, 199)
+SecondTab.Visible = false
+
+Taze.Name = "Taze"
+Taze.Parent = SecondTab
+Taze.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Taze.BorderSizePixel = 2
+Taze.Position = UDim2.new(0.24203822, 0, 0.0904522464, 0)
+Taze.Size = UDim2.new(0, 74, 0, 24)
+Taze.Font = Enum.Font.SourceSans
+Taze.Text = "Taze "
+Taze.TextColor3 = Color3.new(1, 1, 1)
+Taze.TextSize = 14
+
+Kill_2.Name = "Kill"
+Kill_2.Parent = SecondTab
+Kill_2.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Kill_2.BorderSizePixel = 2
+Kill_2.Position = UDim2.new(0.24203822, 0, 0.281407028, 0)
+Kill_2.Size = UDim2.new(0, 74, 0, 24)
+Kill_2.Font = Enum.Font.SourceSans
+Kill_2.Text = "Kill "
+Kill_2.TextColor3 = Color3.new(1, 1, 1)
+Kill_2.TextSize = 14
+
+Arrest.Name = "Arrest"
+Arrest.Parent = SecondTab
+Arrest.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Arrest.BorderSizePixel = 2
+Arrest.Position = UDim2.new(0.24203822, 0, 0.48241204, 0)
+Arrest.Size = UDim2.new(0, 74, 0, 24)
+Arrest.Font = Enum.Font.SourceSans
+Arrest.Text = "Arrest "
+Arrest.TextColor3 = Color3.new(1, 1, 1)
+Arrest.TextSize = 14
+
+NameText.Name = "NameText"
+NameText.Parent = SecondTab
+NameText.BackgroundColor3 = Color3.new(1, 1, 1)
+NameText.BorderSizePixel = 2
+NameText.Position = UDim2.new(0.595541418, 0, 0.37410304, 0)
+NameText.Size = UDim2.new(0, 102, 0, 26)
+NameText.Font = Enum.Font.SourceSans
+NameText.Text = ""
+NameText.TextColor3 = Color3.new(0, 0, 0)
+NameText.TextSize = 14
+
+Goto.Name = "Goto"
+Goto.Parent = SecondTab
+Goto.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Goto.BorderSizePixel = 2
+Goto.Position = UDim2.new(0.24203822, 0, 0.663316548, 0)
+Goto.Size = UDim2.new(0, 74, 0, 24)
+Goto.Font = Enum.Font.SourceSans
+Goto.Text = "Goto"
+Goto.TextColor3 = Color3.new(1, 1, 1)
+Goto.TextSize = 14
+
+Back.Name = "Back"
+Back.Parent = MainFrame
+Back.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Back.BorderSizePixel = 0
+Back.LayoutOrder = 1
+Back.Position = UDim2.new(0.0370320678, 0, 0.847968936, 0)
+Back.Size = UDim2.new(0, 57, 0, 22)
+Back.Visible = false
+Back.ZIndex = 3
+Back.Font = Enum.Font.SourceSans
+Back.Text = "< <"
+Back.TextColor3 = Color3.new(1, 1, 1)
+Back.TextSize = 14
+
+
+Kill.MouseButton1Click : Connect(function()
+	
+	if WalkSpeedText.Text ~= "" then
+		local b = WalkSpeedText.Text
+	
+	
+	for c,d in
+    pairs(game:GetService("Players"):GetPlayers())do if
+    b:lower()==d.Name:sub(1,b:len()):lower()
+    then
+	
+    local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+
+local Arguments = {
+		[1] = Workspace[d.Name],
+        [2] = "Head"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+    end
+	end
+	end
+	
+	
+end)
+
+DestroyWorld.MouseButton1Click : Connect(function()
+	local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+
+local Arguments = {
+		[1] = Workspace,
+        [2] = "Ground"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+
+
+local Arguments = {
+		[1] = Workspace,
+        [2] = "SpareParts"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+	
+
+local Arguments = {
+		[1] = Workspace,
+        [2] = "Spawn"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+	for i, v in pairs(game.Workspace:GetChildren("Property")) do
+		local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+		local Arguments = {
+		[1] = Workspace,
+        [2] = "Property"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+	
+	end
+end)
+ExitButton.MouseButton1Click : Connect(function()
+	RocitizensFucker:Destroy()
+	
+end)
+
+MainFrame.Active = true
+MainFrame.Draggable = true
+
