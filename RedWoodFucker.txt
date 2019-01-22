@@ -296,7 +296,8 @@ ExitButton.MouseButton1Click : Connect(function()
 end)
 KillAll.MouseButton1Click : Connect(function()
 	for i,v in pairs(game.Players:GetChildren()) do
-		
+		local localplayer = game.Players.LocalPlayer
+		if (v.Name ~= localplayer.Name)then
 		local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
 		local Arguments = {
 		[1] = Workspace[v.Name],
@@ -306,7 +307,7 @@ KillAll.MouseButton1Click : Connect(function()
 Remote:InvokeServer(unpack(Arguments))
 		
 		
-		
+		end
 	end
 	
 end)
