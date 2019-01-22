@@ -1,51 +1,30 @@
-local RedWoodFucker = Instance.new("ScreenGui")
+local RocitizensFucker = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local Bar = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local Creator = Instance.new("TextLabel")
 local ExitButton = Instance.new("TextButton")
 local MainTab = Instance.new("Frame")
-local TazeAll = Instance.new("TextButton")
-local KillAll = Instance.new("TextButton")
-local ArrestAll = Instance.new("TextButton")
-local Weapons = Instance.new("TextButton")
-local TeamText = Instance.new("TextBox")
-local Team = Instance.new("TextButton")
-local WalkSpeed = Instance.new("TextButton")
 local WalkSpeedText = Instance.new("TextBox")
-local RemoveAllDoors = Instance.new("TextButton")
-local Btools = Instance.new("TextButton")
 local Tps = Instance.new("TextButton")
+local Kill = Instance.new("TextButton")
+local DestroyWorld = Instance.new("TextButton")
+local KillAll = Instance.new("TextButton")
 local Next = Instance.new("TextButton")
 local SecondTab = Instance.new("Frame")
 local Taze = Instance.new("TextButton")
-local Kill = Instance.new("TextButton")
+local Kill_2 = Instance.new("TextButton")
 local Arrest = Instance.new("TextButton")
 local NameText = Instance.new("TextBox")
 local Goto = Instance.new("TextButton")
 local Back = Instance.new("TextButton")
-local RWTps = Instance.new("Frame")
-local MainTPSTab = Instance.new("Frame")
-local SecurityRoom = Instance.new("TextButton")
-local Cells = Instance.new("TextButton")
-local Armory = Instance.new("TextButton")
-local FirstGateControls = Instance.new("TextButton")
-local SecondGateControls = Instance.new("TextButton")
-local Roof = Instance.new("TextButton")
-local Atv = Instance.new("TextButton")
-local FugitiveTent = Instance.new("TextButton")
-local SecretRoom = Instance.new("TextButton")
-local HeliPad = Instance.new("TextButton")
-local BrownHouse = Instance.new("TextButton")
-local Frame = Instance.new("Frame")
-local Title_2 = Instance.new("TextLabel")
 --Properties:
-RedWoodFucker.Name = "RedWoodFucker"
-RedWoodFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-RedWoodFucker.ResetOnSpawn = false
+RocitizensFucker.Name = "RocitizensFucker"
+RocitizensFucker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RocitizensFucker.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
-MainFrame.Parent = RedWoodFucker
+MainFrame.Parent = RocitizensFucker
 MainFrame.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
 MainFrame.BorderSizePixel = 3
 MainFrame.Position = UDim2.new(0.0137980469, 0, 0.42151165, 0)
@@ -64,7 +43,7 @@ Title.BackgroundTransparency = 1
 Title.Position = UDim2.new(0.246951193, 0, -0.782608628, 0)
 Title.Size = UDim2.new(0, 166, 0, 59)
 Title.Font = Enum.Font.SourceSansBold
-Title.Text = "Red Wood Fucker"
+Title.Text = "Rocitizens Fucker"
 Title.TextColor3 = Color3.new(1, 1, 1)
 Title.TextSize = 24
 
@@ -74,6 +53,7 @@ Creator.BackgroundColor3 = Color3.new(1, 1, 1)
 Creator.BackgroundTransparency = 1
 Creator.Position = UDim2.new(-0.0213414934, 0, -0.260869563, 0)
 Creator.Size = UDim2.new(0, 96, 0, 34)
+Creator.Visible = false
 Creator.Font = Enum.Font.SourceSansBold
 Creator.Text = "AtomiBOmb"
 Creator.TextColor3 = Color3.new(1, 1, 1)
@@ -98,118 +78,17 @@ MainTab.LayoutOrder = -5
 MainTab.Position = UDim2.new(0.021341417, 0, 0.138592407, 0)
 MainTab.Size = UDim2.new(0, 314, 0, 199)
 
-TazeAll.Name = "TazeAll"
-TazeAll.Parent = MainTab
-TazeAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-TazeAll.BorderSizePixel = 2
-TazeAll.Position = UDim2.new(0.0477707013, 0, 0.0804020017, 0)
-TazeAll.Size = UDim2.new(0, 74, 0, 24)
-TazeAll.Font = Enum.Font.SourceSans
-TazeAll.Text = "Taze All"
-TazeAll.TextColor3 = Color3.new(1, 1, 1)
-TazeAll.TextSize = 14
-
-KillAll.Name = "KillAll"
-KillAll.Parent = MainTab
-KillAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-KillAll.BorderSizePixel = 2
-KillAll.Position = UDim2.new(0.0477707013, 0, 0.271356761, 0)
-KillAll.Size = UDim2.new(0, 74, 0, 24)
-KillAll.Font = Enum.Font.SourceSans
-KillAll.Text = "Kill All"
-KillAll.TextColor3 = Color3.new(1, 1, 1)
-KillAll.TextSize = 14
-
-ArrestAll.Name = "ArrestAll"
-ArrestAll.Parent = MainTab
-ArrestAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-ArrestAll.BorderSizePixel = 2
-ArrestAll.Position = UDim2.new(0.0477707013, 0, 0.472361773, 0)
-ArrestAll.Size = UDim2.new(0, 74, 0, 24)
-ArrestAll.Font = Enum.Font.SourceSans
-ArrestAll.Text = "Arrest All"
-ArrestAll.TextColor3 = Color3.new(1, 1, 1)
-ArrestAll.TextSize = 14
-
-Weapons.Name = "Weapons"
-Weapons.Parent = MainTab
-Weapons.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Weapons.BorderSizePixel = 2
-Weapons.Position = UDim2.new(0.382165611, 0, 0.0804019868, 0)
-Weapons.Size = UDim2.new(0, 74, 0, 24)
-Weapons.Font = Enum.Font.SourceSans
-Weapons.Text = "Starter Pack"
-Weapons.TextColor3 = Color3.new(1, 1, 1)
-Weapons.TextSize = 14
-
-TeamText.Name = "TeamText"
-TeamText.Parent = MainTab
-TeamText.BackgroundColor3 = Color3.new(1, 1, 1)
-TeamText.BorderSizePixel = 2
-TeamText.Position = UDim2.new(0.694267511, 0, 0.271356761, 0)
-TeamText.Size = UDim2.new(0, 72, 0, 18)
-TeamText.Font = Enum.Font.SourceSans
-TeamText.Text = ""
-TeamText.TextColor3 = Color3.new(0, 0, 0)
-TeamText.TextSize = 14
-
-Team.Name = "Team"
-Team.Parent = MainTab
-Team.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Team.BorderSizePixel = 2
-Team.Position = UDim2.new(0.687898099, 0, 0.0804019868, 0)
-Team.Size = UDim2.new(0, 74, 0, 24)
-Team.Font = Enum.Font.SourceSans
-Team.Text = "Team ↓"
-Team.TextColor3 = Color3.new(1, 1, 1)
-Team.TextSize = 14
-
-WalkSpeed.Name = "WalkSpeed"
-WalkSpeed.Parent = MainTab
-WalkSpeed.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-WalkSpeed.BorderSizePixel = 2
-WalkSpeed.Position = UDim2.new(0.684849322, 0, 0.471084565, 0)
-WalkSpeed.Size = UDim2.new(0, 74, 0, 24)
-WalkSpeed.Font = Enum.Font.SourceSans
-WalkSpeed.Text = "WalkSpeed ↓"
-WalkSpeed.TextColor3 = Color3.new(1, 1, 1)
-WalkSpeed.TextSize = 14
-
 WalkSpeedText.Name = "WalkSpeedText"
 WalkSpeedText.Parent = MainTab
 WalkSpeedText.BackgroundColor3 = Color3.new(1, 1, 1)
 WalkSpeedText.BorderSizePixel = 2
-WalkSpeedText.Position = UDim2.new(0.694267511, 0, 0.663316548, 0)
-WalkSpeedText.Size = UDim2.new(0, 72, 0, 18)
+WalkSpeedText.Position = UDim2.new(0.0318470858, 0, 0.557788968, 0)
+WalkSpeedText.Size = UDim2.new(0, 104, 0, 26)
 WalkSpeedText.Font = Enum.Font.SourceSans
+WalkSpeedText.PlaceholderText = "Target"
 WalkSpeedText.Text = ""
 WalkSpeedText.TextColor3 = Color3.new(0, 0, 0)
 WalkSpeedText.TextSize = 14
-
-RemoveAllDoors.Name = "RemoveAllDoors"
-RemoveAllDoors.Parent = MainTab
-RemoveAllDoors.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-RemoveAllDoors.BorderSizePixel = 2
-RemoveAllDoors.Position = UDim2.new(0.382165611, 0, 0.271356761, 0)
-RemoveAllDoors.Size = UDim2.new(0, 74, 0, 24)
-RemoveAllDoors.Font = Enum.Font.SourceSans
-RemoveAllDoors.Text = "Remove All Doors"
-RemoveAllDoors.TextColor3 = Color3.new(1, 1, 1)
-RemoveAllDoors.TextScaled = true
-RemoveAllDoors.TextSize = 14
-RemoveAllDoors.TextWrapped = true
-
-Btools.Name = "Btools"
-Btools.Parent = MainTab
-Btools.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Btools.BorderSizePixel = 2
-Btools.Position = UDim2.new(0.382165611, 0, 0.472361803, 0)
-Btools.Size = UDim2.new(0, 74, 0, 24)
-Btools.Font = Enum.Font.SourceSans
-Btools.Text = "Btools"
-Btools.TextColor3 = Color3.new(1, 1, 1)
-Btools.TextSize = 14
-Btools.TextWrapped = true
 
 Tps.Name = "Tps"
 Tps.Parent = MainTab
@@ -217,19 +96,55 @@ Tps.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
 Tps.BorderSizePixel = 2
 Tps.Position = UDim2.new(0.0477707088, 0, 0.783919573, 0)
 Tps.Size = UDim2.new(0, 74, 0, 24)
+Tps.Visible = false
 Tps.Font = Enum.Font.SourceSans
 Tps.Text = "Tps"
 Tps.TextColor3 = Color3.new(1, 1, 1)
 Tps.TextSize = 14
 Tps.TextWrapped = true
 
+Kill.Name = "Kill"
+Kill.Parent = MainTab
+Kill.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Kill.BorderSizePixel = 2
+Kill.Position = UDim2.new(0.0445860326, 0, 0.319390059, 0)
+Kill.Size = UDim2.new(0, 97, 0, 31)
+Kill.Font = Enum.Font.SourceSans
+Kill.Text = "Kill"
+Kill.TextColor3 = Color3.new(1, 1, 1)
+Kill.TextSize = 14
+
+DestroyWorld.Name = "DestroyWorld"
+DestroyWorld.Parent = MainTab
+DestroyWorld.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+DestroyWorld.BorderSizePixel = 2
+DestroyWorld.Position = UDim2.new(0.0414012671, 0, 0.0740594193, 0)
+DestroyWorld.Size = UDim2.new(0, 99, 0, 32)
+DestroyWorld.Font = Enum.Font.SourceSans
+DestroyWorld.Text = "Destroy World"
+DestroyWorld.TextColor3 = Color3.new(1, 1, 1)
+DestroyWorld.TextSize = 14
+
+KillAll.Name = "KillAll"
+KillAll.Parent = MainTab
+KillAll.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+KillAll.BorderSizePixel = 2
+KillAll.Position = UDim2.new(0.420382202, 0, 0.0731589049, 0)
+KillAll.Size = UDim2.new(0, 97, 0, 31)
+KillAll.Font = Enum.Font.SourceSans
+KillAll.Text = "Kill All"
+KillAll.TextColor3 = Color3.new(1, 1, 1)
+KillAll.TextSize = 14
+
 Next.Name = "Next"
 Next.Parent = MainFrame
+Next.Active = false
 Next.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
 Next.BorderSizePixel = 0
 Next.LayoutOrder = 1
 Next.Position = UDim2.new(0.793129623, 0, 0.847968936, 0)
 Next.Size = UDim2.new(0, 57, 0, 22)
+Next.Visible = false
 Next.ZIndex = 3
 Next.Font = Enum.Font.SourceSans
 Next.Text = "> >"
@@ -256,16 +171,16 @@ Taze.Text = "Taze "
 Taze.TextColor3 = Color3.new(1, 1, 1)
 Taze.TextSize = 14
 
-Kill.Name = "Kill"
-Kill.Parent = SecondTab
-Kill.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Kill.BorderSizePixel = 2
-Kill.Position = UDim2.new(0.24203822, 0, 0.281407028, 0)
-Kill.Size = UDim2.new(0, 74, 0, 24)
-Kill.Font = Enum.Font.SourceSans
-Kill.Text = "Kill "
-Kill.TextColor3 = Color3.new(1, 1, 1)
-Kill.TextSize = 14
+Kill_2.Name = "Kill"
+Kill_2.Parent = SecondTab
+Kill_2.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
+Kill_2.BorderSizePixel = 2
+Kill_2.Position = UDim2.new(0.24203822, 0, 0.281407028, 0)
+Kill_2.Size = UDim2.new(0, 74, 0, 24)
+Kill_2.Font = Enum.Font.SourceSans
+Kill_2.Text = "Kill "
+Kill_2.TextColor3 = Color3.new(1, 1, 1)
+Kill_2.TextSize = 14
 
 Arrest.Name = "Arrest"
 Arrest.Parent = SecondTab
@@ -313,379 +228,88 @@ Back.Font = Enum.Font.SourceSans
 Back.Text = "< <"
 Back.TextColor3 = Color3.new(1, 1, 1)
 Back.TextSize = 14
+Kill.MouseButton1Click : Connect(function()
+	print("heck")
+	if WalkSpeedText.Text ~= "" then
+		local b = WalkSpeedText.Text
+	
+	
+	for c,d in
+    pairs(game:GetService("Players"):GetPlayers())do if
+    b:lower()==d.Name:sub(1,b:len()):lower()
+    then
+	print("Heck2")
+    local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
 
-RWTps.Name = "RWTps"
-RWTps.Parent = RedWoodFucker
-RWTps.BackgroundColor3 = Color3.new(0.290196, 0.290196, 0.290196)
-RWTps.BorderSizePixel = 3
-RWTps.Position = UDim2.new(0.744580567, 0, 0.135458171, 0)
-RWTps.Size = UDim2.new(0, 263, 0, 423)
-RWTps.Visible = false
+local Arguments = {
+		[1] = Workspace[d.Name],
+        [2] = "Head"
+}
 
-MainTPSTab.Name = "MainTPSTab"
-MainTPSTab.Parent = RWTps
-MainTPSTab.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
-MainTPSTab.Position = UDim2.new(0.0341525339, 0, 0.0844715461, 0)
-MainTPSTab.Size = UDim2.new(0, 246, 0, 372)
-
-SecurityRoom.Name = "SecurityRoom"
-SecurityRoom.Parent = MainTPSTab
-SecurityRoom.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-SecurityRoom.BorderSizePixel = 2
-SecurityRoom.Position = UDim2.new(0.0913530141, 0, 0.219978482, 0)
-SecurityRoom.Size = UDim2.new(0, 200, 0, 24)
-SecurityRoom.Font = Enum.Font.SourceSans
-SecurityRoom.Text = "Security Room"
-SecurityRoom.TextColor3 = Color3.new(1, 1, 1)
-SecurityRoom.TextSize = 14
-SecurityRoom.TextWrapped = true
-
-Cells.Name = "Cells"
-Cells.Parent = MainTPSTab
-Cells.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Cells.BorderSizePixel = 2
-Cells.Position = UDim2.new(0.0913530141, 0, 0.0599784926, 0)
-Cells.Size = UDim2.new(0, 200, 0, 24)
-Cells.Font = Enum.Font.SourceSans
-Cells.Text = "Cells"
-Cells.TextColor3 = Color3.new(1, 1, 1)
-Cells.TextSize = 14
-Cells.TextWrapped = true
-
-Armory.Name = "Armory"
-Armory.Parent = MainTPSTab
-Armory.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Armory.BorderSizePixel = 2
-Armory.Position = UDim2.new(0.0875507295, 0, 0.139978498, 0)
-Armory.Size = UDim2.new(0, 200, 0, 24)
-Armory.Font = Enum.Font.SourceSans
-Armory.Text = "Armory"
-Armory.TextColor3 = Color3.new(1, 1, 1)
-Armory.TextSize = 14
-Armory.TextWrapped = true
-
-FirstGateControls.Name = "FirstGateControls"
-FirstGateControls.Parent = MainTPSTab
-FirstGateControls.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-FirstGateControls.BorderSizePixel = 2
-FirstGateControls.Position = UDim2.new(0.0875507295, 0, 0.619978487, 0)
-FirstGateControls.Size = UDim2.new(0, 200, 0, 24)
-FirstGateControls.Font = Enum.Font.SourceSans
-FirstGateControls.Text = "1st Gate Controls"
-FirstGateControls.TextColor3 = Color3.new(1, 1, 1)
-FirstGateControls.TextSize = 14
-FirstGateControls.TextWrapped = true
-
-SecondGateControls.Name = "SecondGateControls"
-SecondGateControls.Parent = MainTPSTab
-SecondGateControls.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-SecondGateControls.BorderSizePixel = 2
-SecondGateControls.Position = UDim2.new(0.0875507295, 0, 0.69997853, 0)
-SecondGateControls.Size = UDim2.new(0, 200, 0, 24)
-SecondGateControls.Font = Enum.Font.SourceSans
-SecondGateControls.Text = "2nd Gate Controls"
-SecondGateControls.TextColor3 = Color3.new(1, 1, 1)
-SecondGateControls.TextSize = 14
-SecondGateControls.TextWrapped = true
-
-Roof.Name = "Roof"
-Roof.Parent = MainTPSTab
-Roof.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Roof.BorderSizePixel = 2
-Roof.Position = UDim2.new(0.0875507295, 0, 0.459978491, 0)
-Roof.Size = UDim2.new(0, 200, 0, 24)
-Roof.Font = Enum.Font.SourceSans
-Roof.Text = "Roof"
-Roof.TextColor3 = Color3.new(1, 1, 1)
-Roof.TextSize = 14
-Roof.TextWrapped = true
-
-Atv.Name = "Atv"
-Atv.Parent = MainTPSTab
-Atv.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Atv.BorderSizePixel = 2
-Atv.Position = UDim2.new(0.0875507295, 0, 0.539978504, 0)
-Atv.Size = UDim2.new(0, 200, 0, 24)
-Atv.Font = Enum.Font.SourceSans
-Atv.Text = "Atv"
-Atv.TextColor3 = Color3.new(1, 1, 1)
-Atv.TextSize = 14
-Atv.TextWrapped = true
-
-FugitiveTent.Name = "FugitiveTent"
-FugitiveTent.Parent = MainTPSTab
-FugitiveTent.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-FugitiveTent.BorderSizePixel = 2
-FugitiveTent.Position = UDim2.new(0.0875507295, 0, 0.779978514, 0)
-FugitiveTent.Size = UDim2.new(0, 200, 0, 24)
-FugitiveTent.Font = Enum.Font.SourceSans
-FugitiveTent.Text = "Fugitive Tent"
-FugitiveTent.TextColor3 = Color3.new(1, 1, 1)
-FugitiveTent.TextSize = 14
-FugitiveTent.TextWrapped = true
-
-SecretRoom.Name = "SecretRoom"
-SecretRoom.Parent = MainTPSTab
-SecretRoom.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-SecretRoom.BorderSizePixel = 2
-SecretRoom.Position = UDim2.new(0.0913530141, 0, 0.299978495, 0)
-SecretRoom.Size = UDim2.new(0, 200, 0, 24)
-SecretRoom.Font = Enum.Font.SourceSans
-SecretRoom.Text = "Secret Room"
-SecretRoom.TextColor3 = Color3.new(1, 1, 1)
-SecretRoom.TextSize = 14
-SecretRoom.TextWrapped = true
-
-HeliPad.Name = "HeliPad"
-HeliPad.Parent = MainTPSTab
-HeliPad.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-HeliPad.BorderSizePixel = 2
-HeliPad.Position = UDim2.new(0.0875507295, 0, 0.379978478, 0)
-HeliPad.Size = UDim2.new(0, 200, 0, 24)
-HeliPad.Font = Enum.Font.SourceSans
-HeliPad.Text = "Heli Pad"
-HeliPad.TextColor3 = Color3.new(1, 1, 1)
-HeliPad.TextSize = 14
-HeliPad.TextWrapped = true
-
-BrownHouse.Name = "BrownHouse"
-BrownHouse.Parent = MainTPSTab
-BrownHouse.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-BrownHouse.BorderSizePixel = 2
-BrownHouse.Position = UDim2.new(0.0875507295, 0, 0.860000014, 0)
-BrownHouse.Size = UDim2.new(0, 200, 0, 24)
-BrownHouse.Font = Enum.Font.SourceSans
-BrownHouse.Text = "BrownHouse"
-BrownHouse.TextColor3 = Color3.new(1, 1, 1)
-BrownHouse.TextSize = 14
-BrownHouse.TextWrapped = true
-
-Frame.Parent = RWTps
-Frame.BackgroundColor3 = Color3.new(0.784314, 0.223529, 0.231373)
-Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0, 0, -0.00169035909, 0)
-Frame.Size = UDim2.new(0, 263, 0, 25)
-
-Title_2.Name = "Title"
-Title_2.Parent = RWTps
-Title_2.BackgroundColor3 = Color3.new(1, 1, 1)
-Title_2.BackgroundTransparency = 1
-Title_2.Position = UDim2.new(0.117870726, 0, -0.0365535244, 0)
-Title_2.Size = UDim2.new(0, 200, 0, 50)
-Title_2.Font = Enum.Font.SourceSansBold
-Title_2.Text = "RedWood Prison TPs"
-Title_2.TextColor3 = Color3.new(1, 1, 1)
-Title_2.TextSize = 24
-
--- Scénario
-
-ExitButton.MouseButton1Click : Connect (function()
-RedWoodFucker:Destroy()
-end)
-TazeAll.MouseButton1Click : Connect(function()
-    for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("tase", v) 
+Remote:InvokeServer(unpack(Arguments))
     end
+	end
+	end
+	
+	
+end)
+
+DestroyWorld.MouseButton1Click : Connect(function()
+	local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+
+local Arguments = {
+		[1] = Workspace,
+        [2] = "Ground"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+
+
+local Arguments = {
+		[1] = Workspace,
+        [2] = "SpareParts"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+	
+
+local Arguments = {
+		[1] = Workspace,
+        [2] = "Spawn"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+	for i, v in pairs(game.Workspace:GetChildren("Property")) do
+		local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+		local Arguments = {
+		[1] = Workspace,
+        [2] = "Property"
+}
+
+Remote:InvokeServer(unpack(Arguments))
+	
+	end
+end)
+ExitButton.MouseButton1Click : Connect(function()
+	RocitizensFucker:Destroy()
+	
 end)
 KillAll.MouseButton1Click : Connect(function()
-    for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("dealDamage", v.Character.Humanoid, 100) 
-end
-end)
-ArrestAll.MouseButton1Click : Connect(function()
-for _, v in pairs(game.Players:GetChildren()) do
-game.Workspace.resources.RemoteEvent:FireServer("cuff", v) 
-end
-end)
-Weapons.MouseButton1Click : Connect(function()
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M98B")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "ACR")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "L86A2")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
-game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "M60")
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = "25"    
-end)
-RemoveAllDoors.MouseButton1Click : Connect(function()
-    game.workspace.AllDoors:remove()
-end)
-Btools.MouseButton1Click : Connect(function()
-local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-tool1.BinType = "Clone"
-tool2.BinType = "GameTool"
-tool3.BinType = "Hammer"
-tool4.BinType = "Script"
-tool5.BinType = "Grab"
-end)
-Team.MouseButton1Click : Connect(function()
-    if(TeamText.Text ~= "")
-    then
-    if(TeamText.Text == "Police" or TeamText.Text == "po" or TeamText.Text == "Po")
-    then
-     game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", "police")
-     elseif (TeamText.Text == "Prisoners" or TeamText.Text == "pr" or TeamText.Text == "Pr" or TeamText.Text == "Prisoner" or TeamText.Text == "prisoner") 
-     then
-     game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", "prisoners")
-     elseif (TeamText.Text == "Fugitive" or TeamText.Text == "fugitve" or TeamText.Text == "fu" or TeamText.Text == "Fu")
-     then
-     local lastPlace = game.Players.LocalPlayer.Character.Torso.Position
-     wait(0.3)
-      game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-601.4, -24.3, -332.1))
-      wait(0.1)
-     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(lastPlace))
-   
-     else
-    game.Workspace.resources.RemoteFunction:InvokeServer("requestTeam", TeamText.Text)
-   
-    
-    
-    end
-    end
-        
-    
-end)
-WalkSpeed.MouseButton1Click : Connect(function()
-    if(WalkSpeedText.Text ~= "")
-    then
-    
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedText.Text
-        print("WalkSpeed has been changed")
-        end
-    
-end)
-Next.MouseButton1Click : Connect (function()
-    Next.Visible      = false
-    Back.Visible      = true
-    SecondTab.Visible = true
-    MainTab.Visible   = false
-    
-end)
-Back.MouseButton1Click : Connect (function()
-    Next.Visible      = true
-    Back.Visible      = false
-    SecondTab.Visible = false
-    MainTab.Visible   = true
-    
-end)
-Arrest.MouseButton1Click : Connect (function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		
+		local Remote = game.Workspace.CommunicationRelays.Character['RemoveAccessory']
+		local Arguments = {
+		[1] = Workspace[v.Name],
+        [2] = "Head"
+}
 
-    if (NameText.Text ~= "")
-    then    local b = NameText.Text
-    for c,d in
-    pairs(game:GetService("Players"):GetPlayers())do if
-    b:lower()==d.Name:sub(1,b:len()):lower()
-    then
-    game:GetService("Workspace").resources.RemoteEvent:FireServer("cuff",d)
-    end
-    end
-    end
-    
-    
-end)
-Kill.MouseButton1Click : Connect(function()
-    if (NameText.Text ~= "")
-    then    local b = NameText.Text
-    for c,d in
-    pairs(game:GetService("Players"):GetPlayers())do if
-    b:lower()==d.Name:sub(1,b:len()):lower()
-    then
-    game:GetService("Workspace").resources.RemoteEvent:FireServer("dealDamage",d.Character.Humanoid,100)
-    end
-    end
-    end
-    
-    
-    
-end)
-Taze.MouseButton1Click : Connect (function()
-    if (NameText.Text ~= "")
-    then    local b = NameText.Text
-    for c,d in
-    pairs(game:GetService("Players"):GetPlayers())do if
-    b:lower()==d.Name:sub(1,b:len()):lower()
-    then
-    game:GetService("Workspace").resources.RemoteEvent:FireServer("tase",d)
-    end
-    end
-    end 
-    
-    
-    
-end)
-Goto.MouseButton1Click : Connect (function()
-    if (NameText.Text ~= "")
-    then    local b = NameText.Text
-    for c,d in
-    pairs(game:GetService("Players"):GetPlayers())do if
-    b:lower()==d.Name:sub(1,b:len()):lower()
-    then
-    game.Players.LocalPlayer.Character:MoveTo(d.Character.Torso.Position)
-    end
-    end
-    end
-    
-end)
-Tps.MouseButton1Click : Connect(function()
-    if(Tps.Text == "Tps")
-    then
-    Tps.Text = "Close Tps"
-    RWTps.Visible = true
-    else
-        Tps.Text = "Tps"
-        RWTps.Visible = false
-        end
-    
-end)
-Armory.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(105.805626, 3.98815084, 2.83483744))
-    
-end)
-Atv.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(10.0002174, 4.9727814, -278.929565))
-    
-end)
-Cells.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2.84935522, 3.96974111, 76.8778152))
-    
-end)
-FirstGateControls.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(123.538559, 25.97155, -331.90976))
-    
-end)
-BrownHouse.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-432.90921, -24.0158806, -527.353394))
-    
-end)
-HeliPad.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(263.453125, 4, 64.1009979))
-    
-end)
-Roof.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(52.644783, 33.9684906, -53.3769035))
-    
-end)
-SecondGateControls.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(187.497528, 4.98902416, -422.814575))
-    
-end)
-FugitiveTent.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-616.645569, -24.7896214, -333.158203))
-    
-end)
-SecretRoom.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(116.507835, 3.97595763, -35.0950546))
-    
-end)
-SecurityRoom.MouseButton1Click : Connect(function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(55.2727051, 3.99395561, 2.53936005))
-    
+Remote:InvokeServer(unpack(Arguments))
+		
+		
+		
+	end
+	
 end)
 
 MainFrame.Active = true
 MainFrame.Draggable = true
-
-RWTps.Active =true
-RWTps.Draggable = true
