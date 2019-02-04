@@ -86,7 +86,8 @@ Finish.MouseButton1Click :Connect (function()
 	else
 		appendfile(GameName .. "Tps.txt",NameofTp.Text.."\n")
 		appendfile(GameName .. "Tps.txt","game.Workspace."..plr.Name..".HumanoidRootPart.CFrame = CFrame.new(".. tostring(game.Workspace[plr.Name].HumanoidRootPart.CFrame)..")\n")
-    showhint("Tp has been added check your workspace folder")
+    showHint("Tp has been added, check your workspace folder")
+    	NameofTp.Text = ""
 	end
 	
 end)
