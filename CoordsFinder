@@ -12,6 +12,7 @@ local oof = true
 CoordsFinder.Name = "CoordsFinder"
 CoordsFinder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 CoordsFinder.ResetOnSpawn = false
+CoordsFinder.ZIndexBehavior = "Sibling"
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = CoordsFinder
