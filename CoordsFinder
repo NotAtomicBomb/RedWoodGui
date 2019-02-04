@@ -10,7 +10,7 @@ local GameName = ""
 local oof = true
 --Properties:
 CoordsFinder.Name = "CoordsFinder"
-CoordsFinder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CoordsFinder.Parent = game.CoreGui
 CoordsFinder.ResetOnSpawn = false
 CoordsFinder.ZIndexBehavior = "Sibling"
 
