@@ -19,7 +19,7 @@ MainFrame.BackgroundColor3 = Color3.new(0.937255, 0.937255, 0.937255)
 MainFrame.BorderSizePixel = 7
 MainFrame.Position = UDim2.new(0.0453547761, 0, 0.464544147, 0)
 MainFrame.Size = UDim2.new(0, 171, 0, 171)
-MainFrame.ZIndex = 10000
+
 
 Title.Name = "Title"
 Title.Parent = MainFrame
