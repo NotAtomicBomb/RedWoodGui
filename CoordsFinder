@@ -1,0 +1,95 @@
+
+local CoordsFinder = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local NameofTp = Instance.new("TextBox")
+local NameofGame = Instance.new("TextBox")
+local Finish = Instance.new("TextButton")
+local plr = game.Players.LocalPlayer
+local GameName = ""
+local oof = true
+--Properties:
+CoordsFinder.Name = "CoordsFinder"
+CoordsFinder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CoordsFinder.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = CoordsFinder
+MainFrame.BackgroundColor3 = Color3.new(0.937255, 0.937255, 0.937255)
+MainFrame.BorderSizePixel = 7
+MainFrame.Position = UDim2.new(0.0453547761, 0, 0.464544147, 0)
+MainFrame.Size = UDim2.new(0, 171, 0, 171)
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.new(1, 1, 1)
+Title.BorderSizePixel = 2
+Title.Position = UDim2.new(-0.00216032332, 0, -0.00420339499, 0)
+Title.Size = UDim2.new(0, 171, 0, 50)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Coords Finder"
+Title.TextColor3 = Color3.new(0, 0, 0)
+Title.TextSize = 28
+Title.TextStrokeTransparency = 5
+
+NameofTp.Name = "NameofTp"
+NameofTp.Parent = MainFrame
+NameofTp.BackgroundColor3 = Color3.new(1, 1, 1)
+NameofTp.BorderSizePixel = 2
+NameofTp.Position = UDim2.new(0.0921469554, 0, 0.507002056, 0)
+NameofTp.Size = UDim2.new(0, 138, 0, 34)
+NameofTp.Font = Enum.Font.SourceSans
+NameofTp.PlaceholderText = "Name of Tp"
+NameofTp.Text = ""
+NameofTp.TextColor3 = Color3.new(0, 0, 0)
+NameofTp.TextSize = 14
+
+NameofGame.Name = "NameofGame"
+NameofGame.Parent = MainFrame
+NameofGame.BackgroundColor3 = Color3.new(1, 1, 1)
+NameofGame.BorderSizePixel = 2
+NameofGame.Position = UDim2.new(0.0921469554, 0, 0.507002056, 0)
+NameofGame.Size = UDim2.new(0, 138, 0, 34)
+NameofGame.Font = Enum.Font.SourceSans
+NameofGame.PlaceholderText = "Name of Game"
+NameofGame.Text = ""
+NameofGame.TextColor3 = Color3.new(0, 0, 0)
+NameofGame.TextSize = 14
+
+Finish.Name = "Finish"
+Finish.Parent = MainFrame
+Finish.BackgroundColor3 = Color3.new(1, 1, 1)
+Finish.BorderSizePixel = 2
+Finish.Position = UDim2.new(0.251042783, 0, 0.834487498, 0)
+Finish.Size = UDim2.new(0, 82, 0, 20)
+Finish.Font = Enum.Font.SourceSans
+Finish.Text = "Finish"
+Finish.TextColor3 = Color3.new(0, 0, 0)
+Finish.TextSize = 14
+
+function showHint(text)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Coords Finder";
+    Text = text;
+})
+end
+
+Finish.MouseButton1Click :Connect (function()
+
+	
+	if oof == true and NameofGame ~= "" then
+    NameofGame.Visible = false
+    GameName = NameofGame.Text
+		writefile(GameName.."Tps.txt",GameName.. "\n")
+		oof = false
+		
+	else
+		appendfile(GameName .. "Tps.txt",NameofTp.Text.."\n")
+		appendfile(GameName .. "Tps.txt","game.Workspace."..plr.Name..".HumanoidRootPart.CFrame = CFrame.new(".. tostring(game.Workspace[plr.Name].HumanoidRootPart.CFrame)..")\n")
+    showhint("Tp has been added check your workspace folder")
+	end
+	
+end)
+
+MainFrame.Active = true
+MainFrame.Draggable =true
