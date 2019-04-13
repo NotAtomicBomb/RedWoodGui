@@ -13,7 +13,7 @@ I just ported it over to Bep for convenience.
 Original Mod for SeikoML https://thunderstore.io/package/felixire/ItemOrder/
 
 ----
-**Changenotes**
+```**Changenotes**
 
 v0.0.3
 
@@ -27,5 +27,5 @@ v0.0.2
 v0.0.1
 
   - Initial release
-
+```
 ----
