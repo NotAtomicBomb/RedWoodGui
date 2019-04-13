@@ -10,11 +10,10 @@ All you have to achieve this is to press the O key, and Bam all your items turne
 Thank you Felixire for making the base mod.
 I just ported it over to Bep for convenience.
 
-Original Mod for SeikoML https://thunderstore.io/package/felixire/ItemOrder/
+[Original Mod](https://thunderstore.io/package/felixire/ItemOrder/) for SeikoML 
 
 ----
 **Changenotes**
-```**Changenotes**
 
 v0.0.3
 
@@ -28,5 +27,5 @@ v0.0.2
 v0.0.1
 
   - Initial release
-```
+  
 ----
