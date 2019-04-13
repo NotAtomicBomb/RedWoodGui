@@ -11,7 +11,6 @@ Thank you Felixire for making the base mod.
 I just ported it over to Bep for convenience.
 
 Original Mod for SeikoML https://thunderstore.io/package/felixire/ItemOrder/
-
 ----
 **Changenotes**
 
